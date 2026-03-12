@@ -1,0 +1,12 @@
+*
+
+!css/
+!css/**
+!js/
+!js/**
+!img/
+!img/**
+
+!*.html
+!.gitignore
+!README.md
