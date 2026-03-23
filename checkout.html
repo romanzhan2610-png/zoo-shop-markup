@@ -1,0 +1,827 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    {{> head }}
+  </head>
+  <body>
+    {{> header }}
+    <main class="page-content checkout-page">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+          <a href="#">Главная</a>
+          <svg
+            class="breadcrumb-separator"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <use href="#icon-paw"></use>
+          </svg>
+          <a href="#">Корзина</a>
+          <svg
+            class="breadcrumb-separator"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <use href="#icon-paw"></use>
+          </svg>
+          <span aria-current="page">Оформление заказа</span>
+        </nav>
+
+        <div class="checkout-header">
+          <a
+            href="javascript:history.back()"
+            class="btn-back-icon"
+            aria-label="Назад"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-left"></use>
+            </svg>
+          </a>
+          <h1 class="page-title" style="margin-bottom: 0">Оформление заказа</h1>
+        </div>
+
+        <form class="checkout-grid" action="#" method="POST" id="checkoutForm">
+          <div class="checkout-main">
+            <div class="checkout-block">
+              <h2 class="checkout-block__title">1. Тип доставки</h2>
+
+              <div class="delivery-options">
+                <div class="radio-card" id="cardPickup">
+                  <label class="radio-card__header">
+                    <input
+                      type="radio"
+                      name="delivery_type"
+                      value="pickup"
+                      class="real-radio"
+                    />
+                    <span class="fake-radio"></span>
+                    <div class="radio-card__info">
+                      <div class="radio-card__row">
+                        <span class="radio-card__title">Самовывоз</span>
+                        <span class="radio-card__price">Бесплатно</span>
+                      </div>
+                      <p class="radio-card__desc" id="descPickup">
+                        Выберите удобный филиал.<br />При отсутствии товара в
+                        данном магазине - дата доставки будет указана в описании
+                      </p>
+                      <div
+                        class="radio-card__saved-data hidden"
+                        id="savedDataPickup"
+                      >
+                        <div class="saved-title" id="savedTitlePickup">
+                          Киренского
+                        </div>
+                        <div class="saved-address" id="savedAddressPickup">
+                          г. Красноярск, ул. Академика Киренского, 67
+                        </div>
+                        <div class="saved-time">Ежедневно с 10:00 до 21:00</div>
+                      </div>
+                    </div>
+                  </label>
+
+                  <div class="radio-card__body hidden" id="bodyPickup">
+                    <div class="body-header">
+                      <h3>Филиалы</h3>
+                      <button
+                        type="button"
+                        id="btnClosePickup"
+                        class="modal-close static"
+                        aria-label="Закрыть"
+                      >
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <use href="#icon-close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="branches-list">
+                      <label class="branch-radio">
+                        <input
+                          type="radio"
+                          name="branch"
+                          value="Киренского"
+                          data-address="г. Красноярск, ул. Академика Киренского, 67"
+                          checked
+                        />
+                        <span class="fake-radio"></span>
+                        <div class="branch-info">
+                          <span class="branch-name">Киренского</span>
+                          <span class="branch-address"
+                            >г. Красноярск, ул. Академика Киренского, 67</span
+                          >
+                          <span class="branch-time"
+                            >Ежедневно с 10:00 до 21:00</span
+                          >
+                          <span class="branch-status text-orange"
+                            >Через час, в наличии: 2 шт</span
+                          >
+                        </div>
+                      </label>
+                      <label class="branch-radio">
+                        <input
+                          type="radio"
+                          name="branch"
+                          value="Шумяцково"
+                          data-address="г. Красноярск, ул. Шумяцкого, 4"
+                        />
+                        <span class="fake-radio"></span>
+                        <div class="branch-info">
+                          <span class="branch-name">Шумяцково</span>
+                          <span class="branch-address"
+                            >г. Красноярск, ул. Шумяцкого, 4</span
+                          >
+                          <span class="branch-time"
+                            >Ежедневно с 10:00 до 21:00</span
+                          >
+                          <span class="branch-status text-orange"
+                            >Через час, в наличии: 2 шт</span
+                          >
+                        </div>
+                      </label>
+                      <label class="branch-radio">
+                        <input
+                          type="radio"
+                          name="branch"
+                          value="60 лет октября"
+                          data-address="г. Красноярск, ул. 60 лет октября, 45"
+                        />
+                        <span class="fake-radio"></span>
+                        <div class="branch-info">
+                          <span class="branch-name">60 лет октября</span>
+                          <span class="branch-address"
+                            >г. Красноярск, ул. 60 лет октября, 45</span
+                          >
+                          <span class="branch-time"
+                            >Ежедневно с 10:00 до 21:00</span
+                          >
+                          <span class="branch-status text-brown"
+                            >Привезем 21 января</span
+                          >
+                        </div>
+                      </label>
+                      <label class="branch-radio">
+                        <input
+                          type="radio"
+                          name="branch"
+                          value="Калинина"
+                          data-address="г. Красноярск, ул. Калинина, 183"
+                        />
+                        <span class="fake-radio"></span>
+                        <div class="branch-info">
+                          <span class="branch-name">Калинина</span>
+                          <span class="branch-address"
+                            >г. Красноярск, ул. Калинина, 183</span
+                          >
+                          <span class="branch-time"
+                            >Ежедневно с 10:00 до 21:00</span
+                          >
+                          <span class="branch-status text-brown"
+                            >Привезем 21 января</span
+                          >
+                        </div>
+                      </label>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn-submit-form btn-submit-form-down"
+                      id="btnSavePickup"
+                    >
+                      СОХРАНИТЬ
+                    </button>
+                  </div>
+                  <div class="radio-card__actions hidden" id="actionsPickup">
+                    <button
+                      type="button"
+                      class="btn-text-action"
+                      id="btnChangePickup"
+                    >
+                      ИЗМЕНИТЬ ФИЛИАЛ
+                    </button>
+                  </div>
+                </div>
+
+                <div class="radio-card" id="cardDelivery">
+                  <label class="radio-card__header">
+                    <input
+                      type="radio"
+                      name="delivery_type"
+                      value="delivery"
+                      class="real-radio"
+                    />
+                    <span class="fake-radio"></span>
+                    <div class="radio-card__info">
+                      <div class="radio-card__row">
+                        <span class="radio-card__title">Доставка</span>
+                        <span class="radio-card__price" id="priceDelivery"
+                          >Узнать стоимость</span
+                        >
+                      </div>
+                      <p class="radio-card__desc" id="descDelivery">
+                        Бесплатная доставка по городу от 2000 ₽.<br />Стоимость
+                        на доставку в ближайшие населенные пункты - при выборе
+                        адреса
+                      </p>
+                      <div
+                        class="radio-card__saved-data hidden"
+                        id="savedDataDelivery"
+                      >
+                        <div class="saved-title">Адрес доставки</div>
+                        <div
+                          class="saved-address"
+                          id="savedAddressDelivery"
+                        ></div>
+                      </div>
+                    </div>
+                  </label>
+
+                  <div class="radio-card__body hidden" id="bodyDelivery">
+                    <div
+                      class="form-group custom-dropdown-wrap"
+                      id="cityDropdownWrap"
+                    >
+                      <input
+                        type="text"
+                        id="cityInput"
+                        placeholder="Город (например, Красноярск)"
+                        autocomplete="off"
+                      />
+                      <svg
+                        class="dropdown-chevron"
+                        viewBox="0 0 10 6"
+                        aria-hidden="true"
+                      >
+                        <use href="#icon-dropdown"></use>
+                      </svg>
+                      <ul class="custom-dropdown-list" id="cityList">
+                        <li>г. Красноярск</li>
+                        <li>г. Ачинск</li>
+                        <li>г. Канск</li>
+                        <li>г. Железногорск</li>
+                        <li>г. Минусинск</li>
+                        <li>г. Зеленогорск</li>
+                        <li>г. Лесосибирск</li>
+                        <li>г. Назарово</li>
+                        <li>г. Шарыпово</li>
+                        <li>г. Дивногорск</li>
+                      </ul>
+                    </div>
+                    <div class="form-group" style="margin-top: 12px">
+                      <input
+                        type="text"
+                        id="streetInput"
+                        placeholder="Улица, дом"
+                      />
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group" style="flex: 1">
+                        <input
+                          type="text"
+                          id="flatInput"
+                          placeholder="Квартира"
+                        />
+                      </div>
+                      <div class="form-group" style="flex: 1">
+                        <input
+                          type="text"
+                          id="entranceInput"
+                          placeholder="Подъезд"
+                        />
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn-submit-form btn-submit-form-down"
+                      id="btnSaveDelivery"
+                    >
+                      СОХРАНИТЬ
+                    </button>
+                  </div>
+                  <div class="radio-card__actions hidden" id="actionsDelivery">
+                    <button
+                      type="button"
+                      class="btn-text-action"
+                      id="btnChangeDelivery"
+                    >
+                      ИЗМЕНИТЬ АДРЕС
+                    </button>
+                  </div>
+                </div>
+
+                <div class="datetime-block hidden" id="dateTimeBlock">
+                  <h3 class="subsection-title">Дата и время</h3>
+                  <div class="pills-scroll-area">
+                    <label class="date-pill">
+                      <input type="radio" name="d_date" value="22" checked />
+                      <span class="pill-content"
+                        ><b>22 янв</b><small>чт</small></span
+                      >
+                    </label>
+                    <label class="date-pill">
+                      <input type="radio" name="d_date" value="23" />
+                      <span class="pill-content"
+                        ><b>23 янв</b><small>пт</small></span
+                      >
+                    </label>
+                    <label class="date-pill">
+                      <input type="radio" name="d_date" value="24" />
+                      <span class="pill-content"
+                        ><b>24 янв</b><small>сб</small></span
+                      >
+                    </label>
+                    <label class="date-pill">
+                      <input type="radio" name="d_date" value="25" />
+                      <span class="pill-content"
+                        ><b>25 янв</b><small>вс</small></span
+                      >
+                    </label>
+                    <label class="date-pill">
+                      <input type="radio" name="d_date" value="26" />
+                      <span class="pill-content"
+                        ><b>26 янв</b><small>пн</small></span
+                      >
+                    </label>
+                  </div>
+                  <div class="pills-scroll-area mt-12">
+                    <span class="time-fixed">19:00 - 22:00</span>
+                    <input type="hidden" name="d_time" value="19:00 - 22:00" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="checkout-block">
+              <h2 class="checkout-block__title">2. Получатель</h2>
+              <div class="form-group relative">
+                <label for="userName">ФИО</label>
+                <input
+                  type="text"
+                  id="userName"
+                  name="user_name"
+                  placeholder="Как можно к вам обращаться?"
+                />
+                <span class="form-error-msg">Заполните ФИО</span>
+              </div>
+              <div class="form-group relative">
+                <label for="userPhone">Телефон</label>
+                <input
+                  type="tel"
+                  id="userPhone"
+                  name="user_phone"
+                  placeholder="+7 (999) 999-99-99"
+                />
+                <span class="form-error-msg">Заполните телефон</span>
+              </div>
+              <div class="form-group relative">
+                <label for="userEmail">Email</label>
+                <input
+                  type="email"
+                  id="userEmail"
+                  name="user_email"
+                  placeholder="Email"
+                />
+                <span class="form-error-msg">Укажите корректный Email</span>
+              </div>
+              <div class="form-group">
+                <label for="userComment">Комментарий к заказу</label>
+                <textarea
+                  id="userComment"
+                  name="user_comment"
+                  placeholder="Комментарий"
+                ></textarea>
+              </div>
+              <label
+                class="custom-checkbox policy-checkbox relative"
+                style="margin-top: 12px; display: flex"
+              >
+                <input type="checkbox" id="userPolicy" name="policy" />
+                <span class="box"
+                  ><svg viewBox="0 0 24 24"><use href="#icon-paw"></use></svg
+                ></span>
+                <span class="text"
+                  >Я даюсогласие на обработку своих персональных данных в соответствии с
+                  <a
+                    href="privacy.html"
+                    target="_blank"
+                    style="
+                      color: var(--primary);
+                      text-decoration: underline;
+                      text-underline-offset: 3px;
+                    "
+                    >политикой обработки персональных данных</a
+                  ></span
+                >
+                <span
+                  class="form-error-msg"
+                  style="position: absolute; bottom: -20px; left: 36px"
+                  >Необходимо согласие</span
+                >
+              </label>
+            </div>
+
+            <div class="checkout-block" style="margin-top: 24px">
+              <h2 class="checkout-block__title">3. Оплата</h2>
+              <div class="payment-options">
+                <div class="radio-card mini">
+                  <label class="radio-card__header">
+                    <input
+                      type="radio"
+                      name="payment_type"
+                      value="cash"
+                      class="real-radio"
+                      id="payCash"
+                    />
+                    <span class="fake-radio"></span>
+                    <div class="radio-card__info">
+                      <span class="radio-card__title">Наличные</span>
+                      <span class="radio-card__desc payment-desc"
+                        >С какой суммы нужна сдача</span
+                      >
+                    </div>
+                  </label>
+                </div>
+
+                <div class="change-input-wrap hidden" id="changeInputWrap">
+                  <label for="changeAmountInput"
+                    >С какой суммы подготовить сдачу?</label
+                  >
+                  <input
+                    type="text"
+                    name="change_amount"
+                    id="changeAmountInput"
+                    placeholder="Укажите сумму"
+                    inputmode="numeric"
+                    pattern="[0-9]*"
+                  />
+                </div>
+
+                <div class="radio-card mini">
+                  <label class="radio-card__header">
+                    <input
+                      type="radio"
+                      name="payment_type"
+                      value="card"
+                      class="real-radio"
+                    />
+                    <span class="fake-radio"></span>
+                    <div class="radio-card__info">
+                      <span class="radio-card__title">Безналичные</span>
+                      <span class="radio-card__desc payment-desc"
+                        >При доставке курьер возьмет терминал</span
+                      >
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <label class="custom-checkbox mt-20">
+                <input type="checkbox" name="has_certificate" />
+                <span class="box"
+                  ><svg viewBox="0 0 24 24"><use href="#icon-paw"></use></svg
+                ></span>
+                <span class="text" style="font-weight: 400"
+                  >У меня есть сертификат</span
+                >
+              </label>
+            </div>
+
+            <div class="checkout-block">
+              <h2 class="checkout-block__title">4. Автопокупка</h2>
+              <p class="checkout-desc">
+                Если выбранные товары Вам необходимо покупать регулярно (раз в
+                какой-то период), Вы можете добавить их в автопокупку. И вам
+                будут за день до этого напоминать о заказе. Автопокупки
+                отображаются в профиле, там вы сможете отредактировать
+                информацию по времени и нужным товарам.
+              </p>
+              <label class="custom-checkbox mt-16" style="margin-bottom: 32px">
+                <input type="checkbox" name="autopurchase" />
+                <span class="box"
+                  ><svg viewBox="0 0 24 24"><use href="#icon-paw"></use></svg
+                ></span>
+                <span class="text" style="font-size: 16px"
+                  >Добавить этот заказ в <b>Автопокупку</b></span
+                >
+              </label>
+
+              <button
+                type="submit"
+                class="btn-submit-form btn-submit-form-down btn-block"
+                id="finalSubmitBtn"
+              >
+                ОФОРМИТЬ ЗАКАЗ
+              </button>
+            </div>
+          </div>
+
+          <aside class="checkout-sidebar">
+            <div class="checkout-sidebar__inner">
+              <div class="sidebar-header">
+                <h2 class="sidebar-title">Ваш заказ</h2>
+                <span class="sidebar-count">4 товара</span>
+              </div>
+
+              <div class="sidebar-items">
+                <div class="cart-item">
+                  <div class="cart-item__img-wrap">
+                    <img src="img/3-1.png" alt="Товар" class="cart-item__img" />
+                  </div>
+                  <div class="cart-item__content">
+                    <div class="cart-item__top">
+                      <div class="cart-item__info">
+                        <a href="#" class="cart-item__title"
+                          >Сухой корм PRO PLAN® RENAL PLUS</a
+                        >
+                        <div class="cart-item__weight">500 г</div>
+                      </div>
+                      <div class="cart-item__actions">
+                        <button type="button" class="product-card__fav in-cart">
+                          <svg viewBox="0 0 24 24">
+                            <use href="#icon-heart"></use>
+                          </svg>
+                        </button>
+                        <button type="button" class="cart-remove-btn">
+                          <svg viewBox="0 0 24 24">
+                            <use href="#icon-trash"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="cart-item__bottom">
+                      <div class="qty-selector">
+                        <button type="button" class="qty-btn qty-minus">
+                          -
+                        </button>
+                        <input
+                          type="text"
+                          class="qty-input"
+                          value="1"
+                          readonly
+                        />
+                        <button type="button" class="qty-btn qty-plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="cart-item__price-wrap">
+                        <span class="cart-item__price">1 200 ₽</span>
+                        <span class="cart-item__old-price">1 600 ₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-item">
+                  <div class="cart-item__img-wrap">
+                    <img src="img/3-2.png" alt="Товар" class="cart-item__img" />
+                  </div>
+                  <div class="cart-item__content">
+                    <div class="cart-item__top">
+                      <div class="cart-item__info">
+                        <a href="#" class="cart-item__title"
+                          >Наполнитель для кошек Cat Step Arctic</a
+                        >
+                        <div class="cart-item__weight">10 кг</div>
+                      </div>
+                      <div class="cart-item__actions">
+                        <button type="button" class="product-card__fav in-cart">
+                          <svg viewBox="0 0 24 24">
+                            <use href="#icon-heart"></use>
+                          </svg>
+                        </button>
+                        <button type="button" class="cart-remove-btn">
+                          <svg viewBox="0 0 24 24">
+                            <use href="#icon-trash"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="cart-item__bottom">
+                      <div class="qty-selector">
+                        <button type="button" class="qty-btn qty-minus">
+                          -
+                        </button>
+                        <input
+                          type="text"
+                          class="qty-input"
+                          value="1"
+                          readonly
+                        />
+                        <button type="button" class="qty-btn qty-plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="cart-item__price-wrap">
+                        <span class="cart-item__price">1 200 ₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-item">
+                  <div class="cart-item__img-wrap">
+                    <img src="img/3-5.png" alt="Товар" class="cart-item__img" />
+                  </div>
+                  <div class="cart-item__content">
+                    <div class="cart-item__top">
+                      <div class="cart-item__info">
+                        <a href="#" class="cart-item__title"
+                          >Когтеточка угловая из гофрокартона</a
+                        >
+                        <div class="cart-item__weight">Стандарт</div>
+                      </div>
+                      <div class="cart-item__actions">
+                        <button type="button" class="product-card__fav in-cart">
+                          <svg viewBox="0 0 24 24">
+                            <use href="#icon-heart"></use>
+                          </svg>
+                        </button>
+                        <button type="button" class="cart-remove-btn">
+                          <svg viewBox="0 0 24 24">
+                            <use href="#icon-trash"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="cart-item__bottom">
+                      <div class="qty-selector">
+                        <button type="button" class="qty-btn qty-minus">
+                          -
+                        </button>
+                        <input
+                          type="text"
+                          class="qty-input"
+                          value="1"
+                          readonly
+                        />
+                        <button type="button" class="qty-btn qty-plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="cart-item__price-wrap">
+                        <span class="cart-item__price">850 ₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-item">
+                  <div class="cart-item__img-wrap">
+                    <img src="img/3-3.png" alt="Товар" class="cart-item__img" />
+                  </div>
+                  <div class="cart-item__content">
+                    <div class="cart-item__top">
+                      <div class="cart-item__info">
+                        <a href="#" class="cart-item__title"
+                          >Good Ralf влажный корм премиум</a
+                        >
+                        <div class="cart-item__weight">340 г</div>
+                      </div>
+                      <div class="cart-item__actions">
+                        <button type="button" class="product-card__fav in-cart">
+                          <svg viewBox="0 0 24 24">
+                            <use href="#icon-heart"></use>
+                          </svg>
+                        </button>
+                        <button type="button" class="cart-remove-btn">
+                          <svg viewBox="0 0 24 24">
+                            <use href="#icon-trash"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="cart-item__bottom">
+                      <div class="qty-selector">
+                        <button type="button" class="qty-btn qty-minus">
+                          -
+                        </button>
+                        <input
+                          type="text"
+                          class="qty-input"
+                          value="2"
+                          readonly
+                        />
+                        <button type="button" class="qty-btn qty-plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="cart-item__price-wrap">
+                        <span class="cart-item__price">450 ₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-item">
+                  <div class="cart-item__img-wrap">
+                    <img src="img/3-4.png" alt="Товар" class="cart-item__img" />
+                  </div>
+                  <div class="cart-item__content">
+                    <div class="cart-item__top">
+                      <div class="cart-item__info">
+                        <a href="#" class="cart-item__title"
+                          >MAX&MOLLY, Комбинированная игрушка</a
+                        >
+                        <div class="cart-item__weight">1 шт</div>
+                      </div>
+                      <div class="cart-item__actions">
+                        <button type="button" class="product-card__fav in-cart">
+                          <svg viewBox="0 0 24 24">
+                            <use href="#icon-heart"></use>
+                          </svg>
+                        </button>
+                        <button type="button" class="cart-remove-btn">
+                          <svg viewBox="0 0 24 24">
+                            <use href="#icon-trash"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="cart-item__bottom">
+                      <div class="qty-selector">
+                        <button type="button" class="qty-btn qty-minus">
+                          -
+                        </button>
+                        <input
+                          type="text"
+                          class="qty-input"
+                          value="1"
+                          readonly
+                        />
+                        <button type="button" class="qty-btn qty-plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="cart-item__price-wrap">
+                        <span class="cart-item__price">1 100 ₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sidebar-footer">
+                <div class="cart-promo">
+                  <div class="cart-promo__input-wrap">
+                    <input
+                      type="text"
+                      id="checkoutPromoInput"
+                      placeholder="Введите промокод"
+                      autocomplete="off"
+                    />
+                    <button type="button" id="checkoutPromoBtn">
+                      <svg
+                        viewBox="0 0 16 12"
+                        class="icon-apply"
+                        fill="none"
+                        style="width: 16px; height: 12px"
+                      >
+                        <path
+                          d="M1 6h14M10 1l5 5-5 5"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      <svg
+                        viewBox="0 0 24 24"
+                        class="icon-cancel"
+                        style="display: none; width: 16px; height: 16px"
+                      >
+                        <use href="#icon-close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="promo-message" id="checkoutPromoMessage"></div>
+                </div>
+
+                <div class="cart-summary">
+                  <div class="cart-summary-row">
+                    <span>Сумма:</span>
+                    <span>2 400 ₽</span>
+                  </div>
+                  <div
+                    class="cart-summary-row discount"
+                    id="checkoutDiscountRow"
+                    style="display: none"
+                  >
+                    <span>Скидка по промокоду:</span>
+                    <span>- 0 ₽</span>
+                  </div>
+                  <div
+                    class="cart-summary-row"
+                    id="checkoutDeliveryCost"
+                    style="display: none"
+                  >
+                    <span>Доставка:</span>
+                    <span>200 ₽</span>
+                  </div>
+                  <div class="cart-summary-row total">
+                    <span>Итого:</span>
+                    <span>2 400 ₽</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </form>
+      </div>
+    </main>
+
+    {{> footer }} {{> sprite }} {{> modals }} {{> scripts }}
+  </body>
+</html>

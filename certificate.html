@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    {{> head }}
+  </head>
+  <body>
+    {{> header }}
+
+    <main class="page-content">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+          <a href="#">Главная</a>
+          <svg
+            class="breadcrumb-separator"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <use href="#icon-paw"></use>
+          </svg>
+          <span aria-current="page">Подарочный сертификат</span>
+        </nav>
+        <h1 class="page-title">Подарочный сертификат</h1>
+
+        <div class="certificate-grid">
+          <div class="certificate-image-wrapper">
+            <img
+              src="img/certificate.png"
+              alt="Подарочный сертификат в руках"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="certificate-details">
+            <h2 class="certificate-details-title">
+              Ты знаешь, как порадовать любимцев близких
+            </h2>
+            <p class="certificate-details-subtitle">
+              Универсальный подарок для тех, у кого есть питомцы
+            </p>
+
+            <form class="certificate-form-card" action="#" method="POST">
+              <div class="certificate-step">
+                <h3 class="step-title">1. Сумма сертификата</h3>
+                <div class="amount-options">
+                  <label class="amount-pill">
+                    <input type="radio" name="cert_amount" value="500" />
+                    <span>500 ₽</span>
+                  </label>
+                  <label class="amount-pill">
+                    <input
+                      type="radio"
+                      name="cert_amount"
+                      value="1000"
+                      checked
+                    />
+                    <span>1000 ₽</span>
+                  </label>
+                  <label class="amount-pill">
+                    <input type="radio" name="cert_amount" value="2000" />
+                    <span>2000 ₽</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="certificate-step">
+                <h3 class="step-title">2. Вид сертификата</h3>
+                <div class="type-options">
+                  <label class="cert-type-card">
+                    <input
+                      type="radio"
+                      name="cert_type"
+                      value="electronic"
+                      checked
+                    />
+                    <span class="radio-indicator"></span>
+                    <div class="type-info">
+                      <span class="type-title">Электронный вариант</span>
+                      <span class="type-desc">Придет на ваш Email</span>
+                    </div>
+                  </label>
+
+                  <label class="cert-type-card">
+                    <input type="radio" name="cert_type" value="physical" />
+                    <span class="radio-indicator"></span>
+                    <div class="type-info">
+                      <span class="type-title">В подарочном конверте</span>
+                      <span class="type-desc">Сразу можно будет подарить</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <div class="certificate-actions" id="certActionState1">
+                <button
+                  type="button"
+                  class="btn-submit-form"
+                  id="btnAddCertToCart"
+                >
+                  ДОБАВИТЬ В КОРЗИНУ
+                  <span
+                    class="btn-icon-circle btn-icon-circle--cart"
+                    style="color: var(--text-main)"
+                  >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <use href="#icon-cart"></use>
+                    </svg>
+                  </span>
+                </button>
+                <button
+                  type="button"
+                  class="btn-outline-primary"
+                  style="margin-top: 16px"
+                >
+                  ЗАКАЗАТЬ СЕЙЧАС
+                </button>
+              </div>
+
+              <div class="certificate-actions hidden" id="certActionState2">
+                <div class="action-row-split">
+                  <button
+                    type="button"
+                    class="btn-submit-form btn-add-cart-desktop"
+                  >
+                    В КОРЗИНУ
+                    <span
+                      class="btn-icon-circle btn-icon-circle--arrow"
+                      style="color: var(--text-main); right: 4px"
+                    >
+                      <svg viewBox="0 0 14 14" aria-hidden="true">
+                        <use href="#icon-arrow-up-right"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="qty-selector qty-selector--large">
+                    <button type="button" class="qty-btn qty-minus">-</button>
+                    <input type="text" class="qty-input" value="1" readonly />
+                    <button type="button" class="qty-btn qty-plus">+</button>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="btn-outline-primary"
+                  style="margin-top: 16px"
+                >
+                  ЗАКАЗАТЬ СЕЙЧАС
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    {{> footer }} {{> sprite }} {{> modals }} {{> scripts }}
+  </body>
+</html>

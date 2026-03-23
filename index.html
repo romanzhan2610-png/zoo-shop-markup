@@ -1,0 +1,1406 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    {{> head }}
+  </head>
+  <body>
+    {{> header }}
+    <main>
+      <section class="hero">
+        <div class="container hero__cat-overlay">
+          <div class="hero__content-placeholder">
+            <img
+              src="img/cat-pose-1.png"
+              alt="Маскот кот"
+              class="hero__icon-cat"
+              id="heroCat"
+              aria-hidden="true"
+            />
+          </div>
+        </div>
+
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div
+              class="swiper-slide"
+              style="background-image: url(&quot;img/slide-1.png&quot;)"
+            >
+              <a
+                href="#"
+                class="slide-click-area"
+                aria-label="Смотреть товары"
+              ></a>
+              <div class="container" style="width: 100%">
+                <div class="hero__content">
+                  <h1 class="hero__title">
+                    Товары для ваших питомцев<br />с доставкой по Красноярску
+                  </h1>
+                  <p class="hero__subtitle">
+                    И в ближайшие населенные пункты в день заказа
+                  </p>
+                  <div class="hero__buttons">
+                    <a href="#" class="btn-primary">
+                      ВЫБРАТЬ ТОВАР
+                      <div class="btn-circle-arrow">
+                        <svg viewBox="0 0 14 14" aria-hidden="true">
+                          <use href="#icon-chevron-sm"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="swiper-slide"
+              style="background-image: url(&quot;img/slide-2.jpg&quot;)"
+            >
+              <a
+                href="#"
+                class="slide-click-area"
+                aria-label="Перейти в аптеку"
+              ></a>
+              <div class="container" style="width: 100%">
+                <div class="hero__content">
+                  <h1 class="hero__title">
+                    Ветаптека - лучшие препараты для ваших животных
+                  </h1>
+                  <p class="hero__subtitle">
+                    Только оригинальные лекарственные средства
+                  </p>
+                  <div class="hero__buttons">
+                    <a href="#" class="btn-primary">
+                      ПЕРЕЙТИ В АПТЕКУ
+                      <div class="btn-circle-arrow">
+                        <svg viewBox="0 0 14 14" aria-hidden="true">
+                          <use href="#icon-chevron-sm"></use>
+                        </svg>
+                      </div>
+                    </a>
+                    <a href="#" class="btn-white">SOS СИТУАЦИЯ</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="swiper-slide"
+              style="background-image: url(&quot;img/slide-3.jpg&quot;)"
+            >
+              <a
+                href="#"
+                class="slide-click-area"
+                aria-label="Узнать подробнее"
+              ></a>
+              <div class="container" style="width: 100%">
+                <div class="hero__content">
+                  <h1 class="hero__title">Купи выгодно Farmina</h1>
+                  <p class="hero__subtitle">
+                    Получи максимальную скидку на продукцию Farmina в наших
+                    магазинах
+                  </p>
+                  <div class="hero__buttons">
+                    <a href="#" class="btn-primary">
+                      УЗНАТЬ ПОДРОБНЕЕ
+                      <div class="btn-circle-arrow">
+                        <svg viewBox="0 0 14 14" aria-hidden="true">
+                          <use href="#icon-chevron-sm"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="swiper-slide"
+              style="background-image: url(&quot;img/slide-4.jpg&quot;)"
+            >
+              <a
+                href="#"
+                class="slide-click-area"
+                aria-label="Подарить подарок"
+              ></a>
+              <div class="container" style="width: 100%">
+                <div class="hero__content">
+                  <h1 class="hero__title">Подарочные сертификаты</h1>
+                  <p class="hero__subtitle">Порадуй питомцев ваших близких</p>
+                  <div class="hero__buttons">
+                    <a href="#" class="btn-primary">
+                      ПОДАРИТЬ ПОДАРОК
+                      <div class="btn-circle-arrow">
+                        <svg viewBox="0 0 14 14" aria-hidden="true">
+                          <use href="#icon-chevron-sm"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="swiper-slide"
+              style="background-image: url(&quot;img/slide-5.jpg&quot;)"
+            >
+              <a href="#" class="slide-click-area" aria-label="Промокод"></a>
+              <div class="container" style="width: 100%">
+                <div class="hero__content">
+                  <h1 class="hero__title">Скидка 10% на первый заказ</h1>
+                  <p class="hero__subtitle">В мобильном приложении</p>
+                  <div class="hero__buttons">
+                    <a href="#" class="btn-primary">
+                      СКАЧАТЬ ПРИЛОЖЕНИЕ
+                      <div class="btn-circle-arrow">
+                        <svg viewBox="0 0 14 14" aria-hidden="true">
+                          <use href="#icon-chevron-sm"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="hero-arrows">
+          <div class="container">
+            <button
+              class="slider-nav-btn prev-slide"
+              aria-label="Предыдущий слайд"
+            >
+              <svg viewBox="0 0 32 24" aria-hidden="true">
+                <use href="#icon-hero-prev"></use>
+              </svg>
+            </button>
+            <button
+              class="slider-nav-btn next-slide"
+              aria-label="Следующий слайд"
+            >
+              <svg viewBox="0 0 32 24" aria-hidden="true">
+                <use href="#icon-hero-next"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="categories">
+        <div class="container">
+          <div class="categories__grid">
+            <a href="#" class="category-card">
+              <div class="category-card__thumb">
+                <img
+                  src="img/2-1.png"
+                  alt="Собаки"
+                  class="category-card__img"
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="category-card__title">Собаки</h3>
+            </a>
+            <a href="#" class="category-card">
+              <div class="category-card__thumb">
+                <img
+                  src="img/2-2.png"
+                  alt="Кошки"
+                  class="category-card__img"
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="category-card__title">Кошки</h3>
+            </a>
+            <a href="#" class="category-card">
+              <div class="category-card__thumb">
+                <img
+                  src="img/2-3.png"
+                  alt="Грызуны"
+                  class="category-card__img"
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="category-card__title">Грызуны</h3>
+            </a>
+            <a href="#" class="category-card">
+              <div class="category-card__thumb">
+                <img
+                  src="img/2-4.png"
+                  alt="Птицы"
+                  class="category-card__img"
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="category-card__title">Птицы</h3>
+            </a>
+            <a href="#" class="category-card">
+              <div class="category-card__thumb">
+                <img
+                  src="img/2-5.png"
+                  alt="Рыбки"
+                  class="category-card__img"
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="category-card__title">Рыбки</h3>
+            </a>
+            <a href="#" class="category-card">
+              <div class="category-card__thumb">
+                <img
+                  src="img/2-6.png"
+                  alt="Рептилии"
+                  class="category-card__img"
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="category-card__title">Рептилии</h3>
+            </a>
+            <a href="#" class="category-card">
+              <div class="category-card__thumb">
+                <img
+                  src="img/2-7.png"
+                  alt="Ветаптека"
+                  class="category-card__img"
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="category-card__title">Ветаптека</h3>
+            </a>
+            <a href="#" class="category-card">
+              <div class="category-card__thumb">
+                <img
+                  src="img/2-8.png"
+                  alt="Сертификаты"
+                  class="category-card__img"
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="category-card__title">Сертификаты</h3>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="products-section">
+        <div class="container">
+          <h2 class="section-title">Одобрено вашими питомцами</h2>
+          <div class="products-slider-wrapper">
+            <div class="swiper products-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <button class="product-card__fav" aria-label="В избранное">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#icon-heart"></use>
+                      </svg>
+                    </button>
+                    <div class="product-card__image-wrap">
+                      <img
+                        src="img/3-1.png"
+                        alt="Pro Plan"
+                        class="product-card__img"
+                        loading="lazy"
+                      />
+                      <div class="product-card__labels">
+                        <span class="product-label label-new">Новинка</span>
+                      </div>
+                    </div>
+                    <div class="product-card__price-wrap">
+                      <span class="product-card__price">1200 ₽</span>
+                    </div>
+                    <a href="product.html" class="product-card__title"
+                      >Сухой корм PRO PLAN® RENAL PLUS</a
+                    >
+                    <div class="product-card__vars">
+                      <span class="product-var" data-variant-id="1">250 г</span>
+                      <span class="product-var active" data-variant-id="1">500 г</span>
+                      <span class="product-var" data-variant-id="1">1 кг</span>
+                      <span class="product-var" data-variant-id="1">2 кг</span>
+                      <span class="product-var" data-variant-id="1">3.5 кг</span>
+                    </div>
+                    <div class="product-card__bottom">
+                      <span class="availability-text"
+                        >Наличие: <br /><a href="#" class="availability-link"
+                          >в 2 магазинах</a
+                        ></span
+                      >
+                      <button class="btn-add-cart-desktop btn-add-cart-desktop-mobile" data-product-id="1">В КОРЗИНУ</button>
+                      <button
+                        class="btn-add-cart-mobile"
+                        aria-label="Добавить в корзину"
+                      >
+                        <span class="btn-add-cart__plus">
+                          <svg
+                            viewBox="0 0 24 24"
+                            width="20"
+                            height="20"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            fill="none"
+                          >
+                            <path d="M12 5v14M5 12h14" />
+                          </svg>
+                        </span>
+                        <span class="btn-add-cart__icon">
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <use href="#icon-cart"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <button class="product-card__fav" aria-label="В избранное">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#icon-heart"></use>
+                      </svg>
+                    </button>
+                    <div class="product-card__image-wrap">
+                      <img
+                        src="img/3-2.png"
+                        alt="Cat Step"
+                        class="product-card__img"
+                        loading="lazy"
+                      />
+                      <div class="product-card__labels">
+                        <span class="product-label label-sale">Акция</span>
+                      </div>
+                    </div>
+                    <div class="product-card__price-wrap">
+                      <span class="product-card__price">1200 ₽</span>
+                      <span class="product-card__old-price">1600 ₽</span>
+                    </div>
+                    <a href="product.html" class="product-card__title"
+                      >Наполнитель для кошек Cat Step Arctic</a
+                    >
+                    <div class="product-card__vars">
+                      <span class="product-var" data-variant-id="1">2 кг</span>
+                      <span class="product-var active" data-variant-id="1">10 кг</span>
+                    </div>
+                    <div class="product-card__bottom">
+                      <span
+                        class="availability-text"
+                        style="color: var(--text-gray)"
+                        >Под заказ</span
+                      >
+                      <button class="btn-add-cart-desktop btn-add-cart-desktop-mobile" data-product-id="1">В КОРЗИНУ</button>
+                      <button
+                        class="btn-add-cart-mobile"
+                        aria-label="Добавить в корзину"
+                      >
+                        <span class="btn-add-cart__plus">
+                          <svg
+                            viewBox="0 0 24 24"
+                            width="20"
+                            height="20"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            fill="none"
+                          >
+                            <path d="M12 5v14M5 12h14" />
+                          </svg>
+                        </span>
+                        <span class="btn-add-cart__icon">
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <use href="#icon-cart"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <button class="product-card__fav" aria-label="В избранное">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#icon-heart"></use>
+                      </svg>
+                    </button>
+                    <div class="product-card__image-wrap">
+                      <img
+                        src="img/3-3.png"
+                        alt="Good Ralf"
+                        class="product-card__img"
+                        loading="lazy"
+                      />
+                      <div class="product-card__labels">
+                        <span class="product-label label-new">Новинка</span>
+                        <span class="product-label label-sale">Акция</span>
+                      </div>
+                    </div>
+                    <div class="product-card__price-wrap">
+                      <span class="product-card__price">1200 ₽</span>
+                    </div>
+                    <a href="product.html" class="product-card__title"
+                      >Good Ralf влажный корм премиум (индейка с бурым рисом)</a
+                    >
+                    <div class="product-card__vars">
+                      <span class="product-var active" data-variant-id="1">340 г</span>
+                    </div>
+                    <div class="product-card__bottom">
+                      <span class="availability-text"
+                        >Наличие: <br /><a href="#" class="availability-link"
+                          >в 2 магазинах</a
+                        ></span
+                      >
+                      <button class="btn-add-cart-desktop btn-add-cart-desktop-mobile" data-product-id="1">В КОРЗИНУ</button>
+                      <button
+                        class="btn-add-cart-mobile"
+                        aria-label="Добавить в корзину"
+                      >
+                        <span class="btn-add-cart__plus">
+                          <svg
+                            viewBox="0 0 24 24"
+                            width="20"
+                            height="20"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            fill="none"
+                          >
+                            <path d="M12 5v14M5 12h14" />
+                          </svg>
+                        </span>
+                        <span class="btn-add-cart__icon">
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <use href="#icon-cart"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <button class="product-card__fav" aria-label="В избранное">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#icon-heart"></use>
+                      </svg>
+                    </button>
+                    <div class="product-card__image-wrap">
+                      <img
+                        src="img/3-4.png"
+                        alt="MAX&MOLLY"
+                        class="product-card__img"
+                        loading="lazy"
+                      />
+                      <div class="product-card__labels">
+                        <span class="product-label label-sale">Акция</span>
+                      </div>
+                    </div>
+                    <div class="product-card__price-wrap">
+                      <span class="product-card__price">1100 ₽</span>
+                      <span class="product-card__old-price">1600 ₽</span>
+                    </div>
+                    <a href="product.html" class="product-card__title"
+                      >MAX&MOLLY, Комбинированная игрушка Клякса Боб</a
+                    >
+                    <div class="product-card__vars"></div>
+                    <div class="product-card__bottom">
+                      <span
+                        class="availability-text"
+                        style="color: var(--text-gray)"
+                        >Под заказ</span
+                      >
+                      <button class="btn-add-cart-desktop btn-add-cart-desktop-mobile" data-product-id="1">В КОРЗИНУ</button>
+                      <button
+                        class="btn-add-cart-mobile"
+                        aria-label="Добавить в корзину"
+                      >
+                        <span class="btn-add-cart__plus">
+                          <svg
+                            viewBox="0 0 24 24"
+                            width="20"
+                            height="20"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            fill="none"
+                          >
+                            <path d="M12 5v14M5 12h14" />
+                          </svg>
+                        </span>
+                        <span class="btn-add-cart__icon">
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <use href="#icon-cart"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <button class="product-card__fav" aria-label="В избранное">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#icon-heart"></use>
+                      </svg>
+                    </button>
+                    <div class="product-card__image-wrap">
+                      <img
+                        src="img/3-5.png"
+                        alt="Когтеточка"
+                        class="product-card__img"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="product-card__price-wrap">
+                      <span class="product-card__price">850 ₽</span>
+                    </div>
+                    <a href="product.html" class="product-card__title"
+                      >Когтеточка угловая из гофрокартона большая</a
+                    >
+                    <div class="product-card__vars">
+                      <span class="product-var active" data-variant-id="1">Стандарт</span>
+                    </div>
+                    <div class="product-card__bottom">
+                      <span
+                        class="availability-text"
+                        style="color: var(--text-gray)"
+                        >Под заказ</span
+                      >
+                      <button class="btn-add-cart-desktop btn-add-cart-desktop-mobile" data-product-id="1">В КОРЗИНУ</button>
+                      <button
+                        class="btn-add-cart-mobile"
+                        aria-label="Добавить в корзину"
+                      >
+                        <span class="btn-add-cart__plus">
+                          <svg
+                            viewBox="0 0 24 24"
+                            width="20"
+                            height="20"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            fill="none"
+                          >
+                            <path d="M12 5v14M5 12h14" />
+                          </svg>
+                        </span>
+                        <span class="btn-add-cart__icon">
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <use href="#icon-cart"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <button class="product-card__fav" aria-label="В избранное">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#icon-heart"></use>
+                      </svg>
+                    </button>
+                    <div class="product-card__image-wrap">
+                      <img
+                        src="img/3-6.png"
+                        alt="Шампунь"
+                        class="product-card__img"
+                        loading="lazy"
+                      />
+                      <div class="product-card__labels">
+                        <span class="product-label label-new">Новинка</span>
+                      </div>
+                    </div>
+                    <div class="product-card__price-wrap">
+                      <span class="product-card__price">550 ₽</span>
+                    </div>
+                    <a href="product.html" class="product-card__title"
+                      >Шампунь для кошек и собак гипоаллергенный</a
+                    >
+                    <div class="product-card__vars">
+                      <span class="product-var active" data-variant-id="1">250 мл</span>
+                      <span class="product-var" data-variant-id="1">500 мл</span>
+                    </div>
+                    <div class="product-card__bottom">
+                      <span class="availability-text"
+                        >Наличие: <br /><a href="#" class="availability-link"
+                          >в 2 магазинах</a
+                        ></span
+                      >
+                      <button class="btn-add-cart-desktop btn-add-cart-desktop-mobile" data-product-id="1">В КОРЗИНУ</button>
+                      <button
+                        class="btn-add-cart-mobile"
+                        aria-label="Добавить в корзину"
+                      >
+                        <span class="btn-add-cart__plus">
+                          <svg
+                            viewBox="0 0 24 24"
+                            width="20"
+                            height="20"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            fill="none"
+                          >
+                            <path d="M12 5v14M5 12h14" />
+                          </svg>
+                        </span>
+                        <span class="btn-add-cart__icon">
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <use href="#icon-cart"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              type="button"
+              class="products-slider-nav products-slider-prev"
+              aria-label="Предыдущие товары"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <use href="#icon-slider-prev"></use>
+              </svg>
+            </button>
+            <button
+              type="button"
+              class="products-slider-nav products-slider-next"
+              aria-label="Следующие товары"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <use href="#icon-slider-next"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="features-section">
+        <div class="container">
+          <div class="features__header">
+            <h2 class="features__title">
+              Выбирая питание любимцам в зоомагазине
+            </h2>
+            <p class="features__subtitle">
+              Вы исключаете риск подделок и неправильного хранения
+            </p>
+          </div>
+          <div class="features__grid">
+            <div class="feature-card">
+              <div class="feature-card__icon">
+                <svg
+                  width="64"
+                  height="42"
+                  viewBox="0 0 64 42"
+                  aria-hidden="true"
+                >
+                  <use href="#icon-feature-delivery"></use>
+                </svg>
+              </div>
+              <h3 class="feature-card__title">
+                Мы контролируем доставку товара
+              </h3>
+              <p class="feature-card__desc">
+                Корма перевозятся только в холодильных оборудования
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card__icon">
+                <svg
+                  width="45"
+                  height="56"
+                  viewBox="0 0 45 56"
+                  aria-hidden="true"
+                >
+                  <use href="#icon-feature-quality"></use>
+                </svg>
+              </div>
+              <h3 class="feature-card__title">Качество товара</h3>
+              <p class="feature-card__desc">
+                Заказываем только у проверенных поставщиков и строго следим за
+                свежестью продукции
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card__icon">
+                <svg
+                  width="56"
+                  height="51"
+                  viewBox="0 0 56 51"
+                  aria-hidden="true"
+                >
+                  <use href="#icon-feature-support"></use>
+                </svg>
+              </div>
+              <h3 class="feature-card__title">Помощь в выборе</h3>
+              <p class="feature-card__desc">
+                При необходимости проконсультируем по товарам для животных и
+                ветаптеке
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="time-section">
+        <div class="container time-section__container">
+          <div class="time-section__title-wrap">
+            <h2 class="time-section__title">Мы ценим Ваше время</h2>
+          </div>
+          <div class="time-section__features">
+            <div class="time-feature">
+              <h3 class="time-feature__title">У нас есть доставка</h3>
+              <p class="time-feature__desc">
+                Бесплатная доставка по городу при заказе более 2000 ₽
+              </p>
+            </div>
+            <div class="time-feature">
+              <h3 class="time-feature__title">Автопокупка</h3>
+              <p class="time-feature__desc">
+                На сайте Вы можете запланировать повтор заказ через необходимый
+                период
+              </p>
+            </div>
+          </div>
+          <div class="time-section__image-wrap">
+            <img
+              src="img/time.jpg"
+              alt="Доставка зоотоваров"
+              class="time-section__image"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="loyalty-section">
+        <div class="container">
+          <div class="loyalty__header">
+            <h2 class="loyalty__title">Регистрируйся и получай бонусы</h2>
+            <p class="loyalty__subtitle">
+              Больше выгоды вместе с нашей системой лояльности
+            </p>
+          </div>
+          <div class="loyalty__content">
+            <div class="loyalty__image-col">
+              <img
+                src="img/hamster-card.png"
+                alt="Система лояльности"
+                loading="lazy"
+                class="loyalty__img"
+              />
+            </div>
+            <div class="loyalty__text-col">
+              <ul class="loyalty__list">
+                <li>
+                  <svg
+                    class="paw-icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-paw"></use>
+                  </svg>
+                  Получайте специальные предложения
+                </li>
+                <li>
+                  <svg
+                    class="paw-icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-paw"></use>
+                  </svg>
+                  Оплачивай до 30% от суммы чека
+                </li>
+                <li>
+                  <svg
+                    class="paw-icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-paw"></use>
+                  </svg>
+                  1 бонус = 1 рубль
+                </li>
+                <li>
+                  <svg
+                    class="paw-icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon-paw"></use>
+                  </svg>
+                  Активация через 14 дней и сохраняются в течении 180 дней с
+                  момента начисления
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="loyalty__bottom">
+            <div class="loyalty-card bg-dark-brown">
+              <span class="loyalty-card__percent">3%</span>
+              <span class="loyalty-card__text">Покупка от 100 ₽</span>
+            </div>
+            <div class="loyalty-card bg-medium-brown">
+              <span class="loyalty-card__percent">5%</span>
+              <span class="loyalty-card__text">Покупка от 5000 ₽</span>
+            </div>
+            <div class="loyalty-card bg-orange">
+              <span class="loyalty-card__percent">7%</span>
+              <span class="loyalty-card__text">Покупка от 7000 ₽</span>
+            </div>
+            <a href="#" class="loyalty__btn">
+              ЗАРЕГИСТРИРОВАТЬСЯ
+              <div class="loyalty__btn-icon">
+                <svg viewBox="0 0 14 14" aria-hidden="true">
+                  <use href="#icon-chevron-sm"></use>
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="products-section">
+        <div class="container">
+          <h2 class="section-title">Акции</h2>
+          <div class="products-slider-wrapper">
+            <div class="swiper products-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <button class="product-card__fav" aria-label="В избранное">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#icon-heart"></use>
+                      </svg>
+                    </button>
+                    <div class="product-card__image-wrap">
+                      <img
+                        src="img/3-2.png"
+                        alt="Cat Step"
+                        class="product-card__img"
+                        loading="lazy"
+                      />
+                      <div class="product-card__labels">
+                        <span class="product-label label-sale">Акция</span>
+                      </div>
+                    </div>
+                    <div class="product-card__price-wrap">
+                      <span class="product-card__price">1200 ₽</span>
+                      <span class="product-card__old-price">1600 ₽</span>
+                    </div>
+                    <a href="product.html" class="product-card__title"
+                      >Наполнитель для кошек Cat Step Arctic</a
+                    >
+                    <div class="product-card__vars">
+                      <span class="product-var" data-variant-id="1">2 кг</span>
+                      <span class="product-var active" data-variant-id="1">10 кг</span>
+                    </div>
+                    <div class="product-card__bottom">
+                      <span class="availability-text"
+                        >Наличие: <br /><a href="#" class="availability-link"
+                          >в 2 магазинах</a
+                        ></span
+                      >
+                      <button class="btn-add-cart-desktop btn-add-cart-desktop-mobile" data-product-id="1">В КОРЗИНУ</button>
+                      <button
+                        class="btn-add-cart-mobile"
+                        aria-label="Добавить в корзину"
+                      >
+                        <span class="btn-add-cart__plus">
+                          <svg
+                            viewBox="0 0 24 24"
+                            width="20"
+                            height="20"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            fill="none"
+                          >
+                            <path d="M12 5v14M5 12h14" />
+                          </svg>
+                        </span>
+                        <span class="btn-add-cart__icon">
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <use href="#icon-cart"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <button class="product-card__fav" aria-label="В избранное">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#icon-heart"></use>
+                      </svg>
+                    </button>
+                    <div class="product-card__image-wrap">
+                      <img
+                        src="img/3-4.png"
+                        alt="MAX&MOLLY"
+                        class="product-card__img"
+                        loading="lazy"
+                      />
+                      <div class="product-card__labels">
+                        <span class="product-label label-sale">Акция</span>
+                      </div>
+                    </div>
+                    <div class="product-card__price-wrap">
+                      <span class="product-card__price">1100 ₽</span>
+                      <span class="product-card__old-price">1600 ₽</span>
+                    </div>
+                    <a href="product.html" class="product-card__title"
+                      >MAX&MOLLY, Комбинированная игрушка Клякса Боб</a
+                    >
+                    <div class="product-card__vars"></div>
+                    <div class="product-card__bottom">
+                      <span
+                        class="availability-text"
+                        style="color: var(--text-gray)"
+                        >Под заказ</span
+                      >
+                      <button class="btn-add-cart-desktop btn-add-cart-desktop-mobile" data-product-id="1">В КОРЗИНУ</button>
+                      <button
+                        class="btn-add-cart-mobile"
+                        aria-label="Добавить в корзину"
+                      >
+                        <span class="btn-add-cart__plus">
+                          <svg
+                            viewBox="0 0 24 24"
+                            width="20"
+                            height="20"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            fill="none"
+                          >
+                            <path d="M12 5v14M5 12h14" />
+                          </svg>
+                        </span>
+                        <span class="btn-add-cart__icon">
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <use href="#icon-cart"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <button class="product-card__fav" aria-label="В избранное">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#icon-heart"></use>
+                      </svg>
+                    </button>
+                    <div class="product-card__image-wrap">
+                      <img
+                        src="img/3-3.png"
+                        alt="Good Ralf"
+                        class="product-card__img"
+                        loading="lazy"
+                      />
+                      <div class="product-card__labels">
+                        <span class="product-label label-new">Новинка</span>
+                        <span class="product-label label-sale">Акция</span>
+                      </div>
+                    </div>
+                    <div class="product-card__price-wrap">
+                      <span class="product-card__price">1200 ₽</span>
+                    </div>
+                    <a href="product.html" class="product-card__title"
+                      >Good Ralf влажный корм премиум (индейка с бурым рисом)</a
+                    >
+                    <div class="product-card__vars">
+                      <span class="product-var active" data-variant-id="1">340 г</span>
+                    </div>
+                    <div class="product-card__bottom">
+                      <span class="availability-text"
+                        >Наличие: <br /><a href="#" class="availability-link"
+                          >в 2 магазинах</a
+                        ></span
+                      >
+                      <button class="btn-add-cart-desktop btn-add-cart-desktop-mobile" data-product-id="1">В КОРЗИНУ</button>
+                      <button
+                        class="btn-add-cart-mobile"
+                        aria-label="Добавить в корзину"
+                      >
+                        <span class="btn-add-cart__plus">
+                          <svg
+                            viewBox="0 0 24 24"
+                            width="20"
+                            height="20"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            fill="none"
+                          >
+                            <path d="M12 5v14M5 12h14" />
+                          </svg>
+                        </span>
+                        <span class="btn-add-cart__icon">
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <use href="#icon-cart"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <button class="product-card__fav" aria-label="В избранное">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#icon-heart"></use>
+                      </svg>
+                    </button>
+                    <div class="product-card__image-wrap">
+                      <img
+                        src="img/3-6.png"
+                        alt="Шампунь"
+                        class="product-card__img"
+                        loading="lazy"
+                      />
+                      <div class="product-card__labels">
+                        <span class="product-label label-new">Новинка</span>
+                      </div>
+                    </div>
+                    <div class="product-card__price-wrap">
+                      <span class="product-card__price">550 ₽</span>
+                    </div>
+                    <a href="product.html" class="product-card__title"
+                      >Шампунь для кошек и собак гипоаллергенный</a
+                    >
+                    <div class="product-card__vars">
+                      <span class="product-var active" data-variant-id="1">250 мл</span>
+                      <span class="product-var" data-variant-id="1">500 мл</span>
+                    </div>
+                    <div class="product-card__bottom">
+                      <span class="availability-text"
+                        >Наличие: <br /><a href="#" class="availability-link"
+                          >в 2 магазинах</a
+                        ></span
+                      >
+                      <button class="btn-add-cart-desktop btn-add-cart-desktop-mobile" data-product-id="1">В КОРЗИНУ</button>
+                      <button
+                        class="btn-add-cart-mobile"
+                        aria-label="Добавить в корзину"
+                      >
+                        <span class="btn-add-cart__plus">
+                          <svg
+                            viewBox="0 0 24 24"
+                            width="20"
+                            height="20"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            fill="none"
+                          >
+                            <path d="M12 5v14M5 12h14" />
+                          </svg>
+                        </span>
+                        <span class="btn-add-cart__icon">
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <use href="#icon-cart"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <button class="product-card__fav" aria-label="В избранное">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#icon-heart"></use>
+                      </svg>
+                    </button>
+                    <div class="product-card__image-wrap">
+                      <img
+                        src="img/3-1.png"
+                        alt="Pro Plan"
+                        class="product-card__img"
+                        loading="lazy"
+                      />
+                      <div class="product-card__labels">
+                        <span class="product-label label-new">Новинка</span>
+                      </div>
+                    </div>
+                    <div class="product-card__price-wrap">
+                      <span class="product-card__price">1200 ₽</span>
+                    </div>
+                    <a href="product.html" class="product-card__title"
+                      >Сухой корм PRO PLAN® RENAL PLUS</a
+                    >
+                    <div class="product-card__vars">
+                      <span class="product-var" data-variant-id="1">250 г</span>
+                      <span class="product-var active" data-variant-id="1">500 г</span>
+                      <span class="product-var" data-variant-id="1">1 кг</span>
+                      <span class="product-var" data-variant-id="1">2 кг</span>
+                      <span class="product-var" data-variant-id="1">3.5 кг</span>
+                    </div>
+                    <div class="product-card__bottom">
+                      <span class="availability-text"
+                        >Наличие: <br /><a href="#" class="availability-link"
+                          >в 2 магазинах</a
+                        ></span
+                      >
+                      <button class="btn-add-cart-desktop btn-add-cart-desktop-mobile" data-product-id="1">В КОРЗИНУ</button>
+                      <button
+                        class="btn-add-cart-mobile"
+                        aria-label="Добавить в корзину"
+                      >
+                        <span class="btn-add-cart__plus">
+                          <svg
+                            viewBox="0 0 24 24"
+                            width="20"
+                            height="20"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            fill="none"
+                          >
+                            <path d="M12 5v14M5 12h14" />
+                          </svg>
+                        </span>
+                        <span class="btn-add-cart__icon">
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <use href="#icon-cart"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="product-card">
+                    <button class="product-card__fav" aria-label="В избранное">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#icon-heart"></use>
+                      </svg>
+                    </button>
+                    <div class="product-card__image-wrap">
+                      <img
+                        src="img/3-5.png"
+                        alt="Когтеточка"
+                        class="product-card__img"
+                        loading="lazy"
+                      />
+                      <div class="product-card__labels">
+                        <span class="product-label label-sale">Акция</span>
+                      </div>
+                    </div>
+                    <div class="product-card__price-wrap">
+                      <span class="product-card__price">850 ₽</span>
+                      <span class="product-card__old-price">1200 ₽</span>
+                    </div>
+                    <a href="product.html" class="product-card__title"
+                      >Когтеточка угловая из гофрокартона</a
+                    >
+                    <div class="product-card__vars">
+                      <span class="product-var active" data-variant-id="1">Стандарт</span>
+                    </div>
+                    <div class="product-card__bottom">
+                      <span
+                        class="availability-text"
+                        style="color: var(--text-gray)"
+                        >Под заказ</span
+                      >
+                      <button class="btn-add-cart-desktop btn-add-cart-desktop-mobile" data-product-id="1">В КОРЗИНУ</button>
+                      <button
+                        class="btn-add-cart-mobile"
+                        aria-label="Добавить в корзину"
+                      >
+                        <span class="btn-add-cart__plus">
+                          <svg
+                            viewBox="0 0 24 24"
+                            width="20"
+                            height="20"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            fill="none"
+                          >
+                            <path d="M12 5v14M5 12h14" />
+                          </svg>
+                        </span>
+                        <span class="btn-add-cart__icon">
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <use href="#icon-cart"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="products-slider-nav products-slider-prev"
+              aria-label="Предыдущие товары"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <use href="#icon-slider-prev"></use>
+              </svg>
+            </div>
+            <div
+              class="products-slider-nav products-slider-next"
+              aria-label="Следующие товары"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <use href="#icon-slider-next"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="articles-section">
+        <div class="container">
+          <h2 class="section-title">Важно знать о питомцах</h2>
+          <div class="articles-slider-wrapper">
+            <div class="swiper articles-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#" class="article-card">
+                    <div class="article-card__img-wrap">
+                      <img
+                        src="img/s-1.png"
+                        alt="10 фактов о кошках"
+                        class="article-card__img"
+                        loading="lazy"
+                      />
+                      <div class="article-card__date">25 июл 2025</div>
+                      <div class="article-card__arrow">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <use href="#icon-chevron-sm"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="article-card__content">
+                      <h3 class="article-card__title">10 фактов о кошках</h3>
+                      <p class="article-card__desc">
+                        Все мы обожаем этих пушистых и бесконечно милых
+                        животных. Порой нам кажется, что мы уже...
+                      </p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="article-card">
+                    <div class="article-card__img-wrap">
+                      <img
+                        src="img/s-2.png"
+                        alt="Шлейка или ошейник"
+                        class="article-card__img"
+                        loading="lazy"
+                      />
+                      <div class="article-card__date">25 июл 2025</div>
+                      <div class="article-card__arrow">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <use href="#icon-chevron-sm"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="article-card__content">
+                      <h3 class="article-card__title">
+                        Шлейка или ошейник: что выбрать для собаки
+                      </h3>
+                      <p class="article-card__desc">
+                        Что лучше — ошейник или шлейка? Этот вопрос является
+                        одним из спорных и противоречивых среди...
+                      </p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="article-card">
+                    <div class="article-card__img-wrap">
+                      <img
+                        src="img/s-3.png"
+                        alt="10 фактов о собаках"
+                        class="article-card__img"
+                        loading="lazy"
+                      />
+                      <div class="article-card__date">25 июл 2025</div>
+                      <div class="article-card__arrow">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <use href="#icon-chevron-sm"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="article-card__content">
+                      <h3 class="article-card__title">10 фактов о собаках</h3>
+                      <p class="article-card__desc">
+                        Мы собрали самые интересные факты о собаках. Все мы
+                        обожаем этих пушистых и бесконечно...
+                      </p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="article-card">
+                    <div class="article-card__img-wrap">
+                      <img
+                        src="img/s-2.png"
+                        alt="Шлейка или ошейник"
+                        class="article-card__img"
+                        loading="lazy"
+                      />
+                      <div class="article-card__date">25 июл 2025</div>
+                      <div class="article-card__arrow">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <use href="#icon-chevron-sm"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="article-card__content">
+                      <h3 class="article-card__title">
+                        Шлейка или ошейник: что выбрать для собаки
+                      </h3>
+                      <p class="article-card__desc">
+                        Что лучше — ошейник или шлейка? Этот вопрос является
+                        одним из спорных и противоречивых среди...
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <button
+              type="button"
+              class="articles-slider-nav articles-slider-prev"
+              aria-label="Предыдущие статьи"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <use href="#icon-slider-prev"></use>
+              </svg>
+            </button>
+            <button
+              type="button"
+              class="articles-slider-nav articles-slider-next"
+              aria-label="Следующие статьи"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <use href="#icon-slider-next"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    {{> footer }} {{> sprite }} {{> modals }} {{> scripts }}
+  </body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "name": "zoo-shop-markup",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Проект представляет собой...",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist",
+    "push": "git add . && git commit -m \"auto push: %DATE% %TIME%\" && git push origin main",
+    "publish": "npm run push && npm run deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/romanzhan2610-png/zoo-shop-markup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/romanzhan2610-png/zoo-shop-markup/issues"
+  },
+  "homepage": "https://github.com/romanzhan2610-png/zoo-shop-markup#readme",
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "vite": "^8.0.1",
+    "vite-plugin-handlebars": "^2.0.0"
+  }
+}

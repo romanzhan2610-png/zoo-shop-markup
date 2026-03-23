@@ -1,0 +1,878 @@
+<div class="fab-wrapper" id="fabWidget">
+  <ul class="fab-menu">
+    <li class="fab-menu-item">
+      <a href="#">
+        <div class="fab-icon-wrapper" style="background: #32b4ff">
+          <svg viewBox="0 0 25 21" aria-hidden="true">
+            <use href="#icon-tg"></use>
+          </svg>
+        </div>
+        <span class="fab-item-text">Telegram</span>
+      </a>
+    </li>
+    <li class="fab-menu-item">
+      <a href="#">
+        <div class="fab-icon-wrapper" style="background: #00d264">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#icon-wa"></use>
+          </svg>
+        </div>
+        <span class="fab-item-text">WhatsApp</span>
+      </a>
+    </li>
+    <li class="fab-menu-item">
+      <a href="#">
+        <div class="fab-icon-wrapper" style="background: #8034e1">
+          <svg
+            viewBox="0 0 36 36"
+            style="width: 22px; height: 22px"
+            aria-hidden="true"
+          >
+            <use href="#icon-viber"></use>
+          </svg>
+        </div>
+        <span class="fab-item-text">Max</span>
+      </a>
+    </li>
+    <li class="fab-menu-item">
+      <a href="#">
+        <div class="fab-icon-wrapper" style="background: #f66e17">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#icon-phone"></use>
+          </svg>
+        </div>
+        <span class="fab-item-text">Заказать звонок</span>
+      </a>
+    </li>
+  </ul>
+  <button class="fab-btn" id="fabBtn" aria-label="Связаться с нами">
+    <span class="fab-text">Связаться с нами</span>
+    <span class="fab-icon">
+      <svg width="54" height="54" viewBox="0 0 53 54" aria-hidden="true">
+        <use href="#icon-fab-cat"></use>
+      </svg>
+    </span>
+  </button>
+</div>
+
+<div class="modal-overlay" id="authModalOverlay">
+  <div class="auth-modal" id="authModal">
+    <div class="auth-loader">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <use href="#icon-paw"></use>
+      </svg>
+    </div>
+
+    <button class="modal-close" id="authModalClose" aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <use href="#icon-close"></use>
+      </svg>
+    </button>
+
+    <div class="auth-view active" data-view="login">
+      <h2 class="auth-modal__title">Вход</h2>
+      <div class="form-global-error" id="loginGlobalError"></div>
+      <form class="auth-form" id="formLogin" novalidate>
+        <div class="form-group">
+          <label for="loginInput" class="sr-only">Телефон или Email</label>
+          <input
+            type="text"
+            id="loginInput"
+            name="login"
+            placeholder="Телефон или Email"
+            required
+          />
+          <span class="form-error-msg"></span>
+        </div>
+        <div class="form-group relative">
+          <label for="loginPass" class="sr-only">Пароль</label>
+          <input
+            type="password"
+            id="loginPass"
+            name="password"
+            placeholder="Пароль"
+            required
+          />
+          <button
+            type="button"
+            class="btn-toggle-password"
+            aria-label="Показать пароль"
+          >
+            <svg viewBox="0 0 24 24" class="icon-eye">
+              <path
+                d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle
+                cx="12"
+                cy="12"
+                r="3"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <span class="form-error-msg"></span>
+        </div>
+        <div class="auth-modal__forgot">
+          <button type="button" class="btn-text" data-switch-view="recovery">
+            Забыли пароль?
+          </button>
+        </div>
+        <button type="submit" class="btn-submit-form auth-btn">
+          ВОЙТИ
+          <span class="btn-icon-circle">
+            <svg viewBox="0 0 14 14" aria-hidden="true">
+              <use href="#icon-arrow-up-right"></use>
+            </svg>
+          </span>
+        </button>
+      </form>
+      <div class="auth-modal__footer">
+        Нет аккаунта?
+        <button
+          type="button"
+          class="btn-text-primary"
+          data-switch-view="register"
+        >
+          Зарегистрироваться
+        </button>
+      </div>
+    </div>
+
+    <div class="auth-view" data-view="register">
+      <h2 class="auth-modal__title">Регистрация</h2>
+      <div class="form-global-error" id="registerGlobalError"></div>
+      <form class="auth-form" id="formRegister" novalidate>
+        <div class="form-group">
+          <label for="regName" class="sr-only">Имя</label>
+          <input
+            type="text"
+            id="regName"
+            name="name"
+            placeholder="Имя"
+            required
+          />
+          <span class="form-error-msg"></span>
+        </div>
+        <div class="form-group">
+          <label for="regEmail" class="sr-only">Email</label>
+          <input
+            type="email"
+            id="regEmail"
+            name="email"
+            placeholder="Email"
+            required
+          />
+          <span class="form-error-msg"></span>
+        </div>
+        <div class="form-group">
+          <label for="regPhone" class="sr-only">Телефон</label>
+          <input
+            type="tel"
+            id="regPhone"
+            name="phone"
+            placeholder="Телефон"
+            required
+          />
+          <span class="form-error-msg"></span>
+        </div>
+        <div class="form-group relative">
+          <label for="regPass" class="sr-only">Пароль</label>
+          <input
+            type="password"
+            id="regPass"
+            name="new_password"
+            placeholder="Пароль"
+            required
+            minlength="6"
+          />
+          <button
+            type="button"
+            class="btn-toggle-password"
+            aria-label="Показать пароль"
+          >
+            <svg viewBox="0 0 24 24" class="icon-eye">
+              <path
+                d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle
+                cx="12"
+                cy="12"
+                r="3"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <span class="form-error-msg"></span>
+        </div>
+        <div class="form-group relative">
+          <label for="regPassConfirm" class="sr-only">Повторите пароль</label>
+          <input
+            type="password"
+            id="regPassConfirm"
+            name="new_password_confirm"
+            placeholder="Повторите пароль"
+            required
+          />
+          <span class="form-error-msg"></span>
+        </div>
+        <label class="custom-checkbox auth-policy">
+          <input type="checkbox" name="policy" required />
+          <span class="box">
+            <svg viewBox="0 0 24 24"><use href="#icon-paw"></use></svg>
+          </span>
+          <span class="text"
+            >Согласен с
+            <a
+              href="privacy.html"
+              target="_blank"
+              style="
+                color: var(--primary);
+                text-decoration: underline;
+                text-underline-offset: 3px;
+              "
+              >политикой конфиденциальности</a
+            ></span
+          >
+        </label>
+        <button type="submit" class="btn-submit-form auth-btn">
+          ЗАРЕГИСТРИРОВАТЬСЯ
+          <span class="btn-icon-circle">
+            <svg viewBox="0 0 14 14" aria-hidden="true">
+              <use href="#icon-arrow-up-right"></use>
+            </svg>
+          </span>
+        </button>
+      </form>
+      <div class="auth-modal__footer">
+        Уже есть аккаунт?
+        <button type="button" class="btn-text-primary" data-switch-view="login">
+          Войти
+        </button>
+      </div>
+    </div>
+
+    <div class="auth-view" data-view="recovery">
+      <button type="button" class="btn-back" data-switch-view="login">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#icon-chevron-left"></use>
+        </svg>
+        Назад
+      </button>
+      <h2 class="auth-modal__title">Восстановление</h2>
+      <p class="auth-modal__desc">
+        На вашу электронную почту мы отправим ссылку для восстановления пароля.
+        Если письмо не пришло, посмотрите в папке Нежелательная почта (спам),
+        возможно оно там. Либо попробуйте восстановить пароль заново.
+      </p>
+      <div class="form-global-error" id="recoveryGlobalError"></div>
+      <form class="auth-form" id="formRecovery" novalidate>
+        <div class="form-group">
+          <label for="recEmail" class="sr-only">Email</label>
+          <input
+            type="email"
+            id="recEmail"
+            name="contact"
+            placeholder="Email"
+            required
+          />
+          <span class="form-error-msg"></span>
+        </div>
+        <button type="submit" class="btn-submit-form auth-btn">
+          ПОЛУЧИТЬ КОД
+          <span class="btn-icon-circle">
+            <svg viewBox="0 0 14 14" aria-hidden="true">
+              <use href="#icon-arrow-up-right"></use>
+            </svg>
+          </span>
+        </button>
+      </form>
+    </div>
+
+    <div class="auth-view" data-view="code">
+      <button type="button" class="btn-back" data-switch-view="login">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#icon-chevron-left"></use>
+        </svg>
+        Отмена
+      </button>
+      <h2 class="auth-modal__title">Код подтверждения</h2>
+      <p class="auth-modal__desc">
+        Мы выслали вам код подтверждения на почту
+        <strong id="codeTargetInfo"></strong>. Введите его в поле ниже.
+      </p>
+      <div class="form-global-error" id="codeGlobalError"></div>
+      <form class="auth-form" id="formCode" novalidate>
+        <div class="code-inputs-wrapper">
+          <input
+            type="tel"
+            class="code-input"
+            aria-label="Первая цифра кода"
+            maxlength="1"
+            pattern="[0-9]"
+            required
+          />
+          <input
+            type="tel"
+            class="code-input"
+            aria-label="Вторая цифра кода"
+            maxlength="1"
+            pattern="[0-9]"
+            required
+          />
+          <input
+            type="tel"
+            class="code-input"
+            aria-label="Третья цифра кода"
+            maxlength="1"
+            pattern="[0-9]"
+            required
+          />
+          <input
+            type="tel"
+            class="code-input"
+            aria-label="Четвертая цифра кода"
+            maxlength="1"
+            pattern="[0-9]"
+            required
+          />
+        </div>
+        <button type="submit" class="btn-submit-form auth-btn">
+          ПОДТВЕРДИТЬ
+          <span class="btn-icon-circle">
+            <svg viewBox="0 0 14 14" aria-hidden="true">
+              <use href="#icon-arrow-up-right"></use>
+            </svg>
+          </span>
+        </button>
+        <div class="auth-modal__resend">
+          Отправить код повторно через <span id="resendTimer">59</span>с
+        </div>
+      </form>
+    </div>
+
+    <div class="auth-view" data-view="new-password">
+      <h2 class="auth-modal__title">Новый пароль</h2>
+      <div class="form-global-error" id="newPassGlobalError"></div>
+      <form class="auth-form" id="formNewPassword" novalidate>
+        <div class="form-group relative">
+          <label for="newPass1" class="sr-only">Новый пароль</label>
+          <input
+            type="password"
+            id="newPass1"
+            name="pass1"
+            placeholder="Новый пароль"
+            required
+            minlength="6"
+          />
+          <span class="form-error-msg"></span>
+        </div>
+        <div class="form-group relative">
+          <label for="newPass2" class="sr-only">Повторите пароль</label>
+          <input
+            type="password"
+            id="newPass2"
+            name="pass2"
+            placeholder="Повторите пароль"
+            required
+          />
+          <span class="form-error-msg"></span>
+        </div>
+        <button type="submit" class="btn-submit-form auth-btn">
+          СОХРАНИТЬ И ВОЙТИ
+          <span class="btn-icon-circle">
+            <svg viewBox="0 0 14 14" aria-hidden="true">
+              <use href="#icon-arrow-up-right"></use>
+            </svg>
+          </span>
+        </button>
+      </form>
+    </div>
+
+    <div class="auth-view" data-view="success">
+      <div class="auth-success-icon">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+      </div>
+      <h2 class="auth-modal__title" style="text-align: center">Успешно!</h2>
+      <p
+        class="auth-modal__desc"
+        id="successMessage"
+        style="text-align: center; margin-bottom: 30px"
+      ></p>
+      <button
+        type="button"
+        class="btn-submit-form auth-btn"
+        id="btnSuccessClose"
+      >
+        ОТЛИЧНО
+        <span class="btn-icon-circle">
+          <svg viewBox="0 0 14 14" aria-hidden="true">
+            <use href="#icon-arrow-up-right"></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="cartOverlay">
+  <div class="cart-drawer" id="cartDrawer">
+    <button
+      class="modal-close static"
+      id="cartClose"
+      aria-label="Закрыть корзину"
+      style="position: absolute; top: 24px; right: 32px; z-index: 10"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <use href="#icon-close"></use>
+      </svg>
+    </button>
+
+    <div class="cart-view active" data-cart-view="list">
+      <div class="cart-drawer__header">
+        <div>
+          <h2 class="cart-drawer__title">Корзина</h2>
+          <span class="cart-drawer__count">3 товара</span>
+        </div>
+      </div>
+
+      <div class="cart-drawer__body">
+        <div class="cart-item" data-product-id="1">
+          <div class="cart-item__img-wrap">
+            <img src="img/3-1.png" alt="Товар" class="cart-item__img" />
+          </div>
+          <div class="cart-item__content">
+            <div class="cart-item__top">
+              <div class="cart-item__info">
+                <a href="#" class="cart-item__title"
+                  >Сухой корм PRO PLAN® RENAL PLUS</a
+                >
+                <div class="cart-item__weight">500 г</div>
+              </div>
+              <div class="cart-item__actions">
+                <button
+                  type="button"
+                  class="product-card__fav in-cart"
+                  aria-label="В избранное"
+                >
+                  <svg viewBox="0 0 24 24"><use href="#icon-heart"></use></svg>
+                </button>
+                <button
+                  type="button"
+                  class="cart-remove-btn"
+                  aria-label="Удалить"
+                >
+                  <svg viewBox="0 0 24 24"><use href="#icon-trash"></use></svg>
+                </button>
+              </div>
+            </div>
+            <div class="cart-item__bottom">
+              <div class="qty-selector">
+                <button type="button" class="qty-btn qty-minus">-</button>
+                <input type="text" class="qty-input" value="1" readonly />
+                <button type="button" class="qty-btn qty-plus">+</button>
+              </div>
+              <div class="cart-item__price-wrap">
+                <span class="cart-item__price">1 200 ₽</span>
+                <span class="cart-item__old-price">1 600 ₽</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cart-item" data-product-id="1">
+          <div class="cart-item__img-wrap">
+            <img src="img/3-2.png" alt="Товар" class="cart-item__img" />
+          </div>
+          <div class="cart-item__content">
+            <div class="cart-item__top">
+              <div class="cart-item__info">
+                <a href="#" class="cart-item__title"
+                  >Наполнитель для кошек Cat Step Arctic</a
+                >
+                <div class="cart-item__weight">10 кг</div>
+              </div>
+              <div class="cart-item__actions">
+                <button
+                  type="button"
+                  class="product-card__fav in-cart"
+                  aria-label="В избранное"
+                >
+                  <svg viewBox="0 0 24 24"><use href="#icon-heart"></use></svg>
+                </button>
+                <button
+                  type="button"
+                  class="cart-remove-btn"
+                  aria-label="Удалить"
+                >
+                  <svg viewBox="0 0 24 24"><use href="#icon-trash"></use></svg>
+                </button>
+              </div>
+            </div>
+            <div class="cart-item__bottom">
+              <div class="qty-selector">
+                <button type="button" class="qty-btn qty-minus">-</button>
+                <input type="text" class="qty-input" value="1" readonly />
+                <button type="button" class="qty-btn qty-plus">+</button>
+              </div>
+              <div class="cart-item__price-wrap">
+                <span class="cart-item__price">1 200 ₽</span>
+                <span class="cart-item__old-price">1 500 ₽</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cart-item" data-product-id="1">
+          <div class="cart-item__img-wrap">
+            <img src="img/3-5.png" alt="Товар" class="cart-item__img" />
+          </div>
+          <div class="cart-item__content">
+            <div class="cart-item__top">
+              <div class="cart-item__info">
+                <a href="#" class="cart-item__title"
+                  >Когтеточка угловая из гофрокартона</a
+                >
+                <div class="cart-item__weight">Стандарт</div>
+              </div>
+              <div class="cart-item__actions">
+                <button
+                  type="button"
+                  class="product-card__fav in-cart"
+                  aria-label="В избранное"
+                >
+                  <svg viewBox="0 0 24 24"><use href="#icon-heart"></use></svg>
+                </button>
+                <button
+                  type="button"
+                  class="cart-remove-btn"
+                  aria-label="Удалить"
+                >
+                  <svg viewBox="0 0 24 24"><use href="#icon-trash"></use></svg>
+                </button>
+              </div>
+            </div>
+            <div class="cart-item__bottom">
+              <div class="qty-selector">
+                <button type="button" class="qty-btn qty-minus">-</button>
+                <input type="text" class="qty-input" value="1" readonly />
+                <button type="button" class="qty-btn qty-plus">+</button>
+              </div>
+              <div class="cart-item__price-wrap">
+                <span class="cart-item__price">850 ₽</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cart-item" data-product-id="1">
+          <div class="cart-item__img-wrap">
+            <img src="img/3-3.png" alt="Товар" class="cart-item__img" />
+          </div>
+          <div class="cart-item__content">
+            <div class="cart-item__top">
+              <div class="cart-item__info">
+                <a href="#" class="cart-item__title"
+                  >Good Ralf влажный корм премиум</a
+                >
+                <div class="cart-item__weight">340 г</div>
+              </div>
+              <div class="cart-item__actions">
+                <button
+                  type="button"
+                  class="product-card__fav in-cart"
+                  aria-label="В избранное"
+                >
+                  <svg viewBox="0 0 24 24"><use href="#icon-heart"></use></svg>
+                </button>
+                <button
+                  type="button"
+                  class="cart-remove-btn"
+                  aria-label="Удалить"
+                >
+                  <svg viewBox="0 0 24 24"><use href="#icon-trash"></use></svg>
+                </button>
+              </div>
+            </div>
+            <div class="cart-item__bottom">
+              <div class="qty-selector">
+                <button type="button" class="qty-btn qty-minus">-</button>
+                <input type="text" class="qty-input" value="2" readonly />
+                <button type="button" class="qty-btn qty-plus">+</button>
+              </div>
+              <div class="cart-item__price-wrap">
+                <span class="cart-item__price">450 ₽</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cart-item" data-product-id="1">
+          <div class="cart-item__img-wrap">
+            <img src="img/3-4.png" alt="Товар" class="cart-item__img" />
+          </div>
+          <div class="cart-item__content">
+            <div class="cart-item__top">
+              <div class="cart-item__info">
+                <a href="#" class="cart-item__title"
+                  >MAX&MOLLY, Комбинированная игрушка</a
+                >
+                <div class="cart-item__weight">1 шт</div>
+              </div>
+              <div class="cart-item__actions">
+                <button
+                  type="button"
+                  class="product-card__fav in-cart"
+                  aria-label="В избранное"
+                >
+                  <svg viewBox="0 0 24 24"><use href="#icon-heart"></use></svg>
+                </button>
+                <button
+                  type="button"
+                  class="cart-remove-btn"
+                  aria-label="Удалить"
+                >
+                  <svg viewBox="0 0 24 24"><use href="#icon-trash"></use></svg>
+                </button>
+              </div>
+            </div>
+            <div class="cart-item__bottom">
+              <div class="qty-selector">
+                <button type="button" class="qty-btn qty-minus">-</button>
+                <input type="text" class="qty-input" value="1" readonly />
+                <button type="button" class="qty-btn qty-plus">+</button>
+              </div>
+              <div class="cart-item__price-wrap">
+                <span class="cart-item__price">1 100 ₽</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cart-drawer__footer">
+        <form class="cart-promo" id="promoForm" novalidate>
+          <div class="cart-promo__input-wrap">
+            <input
+              type="text"
+              id="promoInput"
+              placeholder="Введите промокод"
+              autocomplete="off"
+            />
+            <button type="submit" id="promoBtn" aria-label="Применить промокод">
+              <svg
+                viewBox="0 0 16 12"
+                class="icon-apply"
+                fill="none"
+                style="width: 16px; height: 12px"
+              >
+                <path
+                  d="M1 6h14M10 1l5 5-5 5"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="icon-cancel"
+                style="display: none; width: 16px; height: 16px"
+              >
+                <use href="#icon-close"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
+        <div class="promo-message" id="promoMessage"></div>
+
+        <div class="cart-summary">
+          <div class="cart-summary-row">
+            <span>Сумма:</span>
+            <span id="cartSubtotal">3 600 ₽</span>
+          </div>
+          <div
+            class="cart-summary-row discount"
+            id="cartDiscountRow"
+            style="display: none"
+          >
+            <span>Скидка по промокоду:</span>
+            <span id="cartDiscount">- 0 ₽</span>
+          </div>
+          <div class="cart-summary-row total">
+            <span>Итого:</span>
+            <span class="cart-drawer__total-price" id="cartTotal">3 600 ₽</span>
+          </div>
+        </div>
+
+        <button type="button" class="btn-submit-form" data-switch-cart="prompt">
+          ПЕРЕЙТИ К ОФОРМЛЕНИЮ
+          <span class="btn-icon-circle">
+            <svg viewBox="0 0 14 14" aria-hidden="true">
+              <use href="#icon-arrow-up-right"></use>
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <div class="cart-view" data-cart-view="prompt">
+      <div class="cart-drawer__header">
+        <button
+          type="button"
+          class="btn-back"
+          data-switch-cart="list"
+          style="margin: 0"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#icon-chevron-left"></use>
+          </svg>
+          Назад в корзину
+        </button>
+      </div>
+      <div class="cart-drawer__body prompt-body">
+        <h2 class="auth-modal__title">
+          Авторизуйся и получай бонусы для следующих покупок
+        </h2>
+        <p class="auth-modal__desc">
+          Войдите в ваш аккаунт, чтобы получать бонусы и использовать их на
+          следующие покупки, а также для быстрого оформления заказа без ввода
+          дополнительных данных
+        </p>
+        <div class="prompt-actions">
+          <button type="button" class="btn-submit-form" id="btnPromptLogin">
+            ВОЙТИ / ЗАРЕГИСТРИРОВАТЬСЯ
+            <span class="btn-icon-circle">
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                style="width: 16px; height: 16px; stroke-width: 1.5"
+              >
+                <use href="#icon-user"></use>
+              </svg>
+            </span>
+          </button>
+          <a
+            href="checkout.html"
+            class="btn-outline-primary"
+            style="text-decoration: none"
+          >
+            ПРОДОЛЖИТЬ КАК ГОСТЬ
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="branchesModalOverlay">
+  <div class="branches-modal">
+    <div class="branches-modal__header">
+      <h2 class="branches-modal__title">Филиалы</h2>
+      <button
+        class="modal-close static"
+        id="branchesModalClose"
+        aria-label="Закрыть"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#icon-close"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="branches-modal__grid">
+      <div class="branches-modal__list-wrap">
+        <div class="branches-modal__list">
+          <div
+            class="branch-modal-item active"
+            data-coords="56.008984, 92.766730"
+          >
+            <h4 class="branch-modal__name">Киренского</h4>
+            <p class="branch-modal__address">
+              г. Красноярск, ул. Академика Киренского, 67
+            </p>
+            <p class="branch-modal__time">Ежедневно с 10:00 до 21:00</p>
+            <div class="branch-modal__bottom">
+              <button class="btn-buy-outline">КУПИТЬ</button>
+              <span class="branch-modal__status text-orange"
+                >В наличии: 2 шт</span
+              >
+            </div>
+          </div>
+
+          <div class="branch-modal-item" data-coords="56.054366, 92.898858">
+            <h4 class="branch-modal__name">Шумяцково</h4>
+            <p class="branch-modal__address">г. Красноярск, ул. Шумяцкого, 4</p>
+            <p class="branch-modal__time">Ежедневно с 10:00 до 21:00</p>
+            <div class="branch-modal__bottom">
+              <button class="btn-buy-outline">КУПИТЬ</button>
+              <span class="branch-modal__status text-orange"
+                >В наличии: 2 шт</span
+              >
+            </div>
+          </div>
+
+          <div class="branch-modal-item" data-coords="55.986377, 92.898715">
+            <h4 class="branch-modal__name">60 лет октября</h4>
+            <p class="branch-modal__address">
+              г. Красноярск, ул. 60 лет октября, 45
+            </p>
+            <p class="branch-modal__time">Ежедневно с 10:00 до 21:00</p>
+            <div class="branch-modal__bottom">
+              <button class="btn-buy-outline">КУПИТЬ</button>
+              <span class="branch-modal__status text-gray"
+                >Привезем 21 января</span
+              >
+            </div>
+          </div>
+
+          <div class="branch-modal-item" data-coords="56.046328, 92.802100">
+            <h4 class="branch-modal__name">Калинина</h4>
+            <p class="branch-modal__address">
+              г. Красноярск, ул. Калинина, 183
+            </p>
+            <p class="branch-modal__time">Ежедневно с 10:00 до 21:00</p>
+            <div class="branch-modal__bottom">
+              <button class="btn-buy-outline">КУПИТЬ</button>
+              <span class="branch-modal__status text-gray"
+                >Привезем 21 января</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="branches-modal__map-wrap">
+        <div id="branchesMap"></div>
+      </div>
+    </div>
+  </div>
+</div>

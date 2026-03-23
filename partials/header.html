@@ -1,0 +1,962 @@
+<header class="header" id="header">
+  <div class="container header__wrapper">
+    <div class="header__left">
+      <a href="/zoo-shop-markup" class="logo" aria-label="На главную">
+        <img src="img/logo.png" alt="Дружок" />
+      </a>
+
+      <button
+        class="btn-catalog"
+        id="catalogBtn"
+        aria-label="Открыть каталог товаров"
+      >
+        <div class="btn-catalog__icon-wrap">
+          <div class="burger-icon" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+        <span>Каталог</span>
+      </button>
+
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li><a href="certificate.html">Подарочные карты</a></li>
+          <li class="nav-item-dropdown">
+            Покупателям
+            <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true">
+              <use href="#icon-dropdown"></use>
+            </svg>
+            <ul class="dropdown-menu">
+              <li><a href="#">SOS-помощь</a></li>
+              <li><a href="#">Акции</a></li>
+              <li><a href="return-policy.html">Возврат товара</a></li>
+              <li><a href="delivery.html">Доставка и оплата</a></li>
+              <li><a href="privacy.html">Политика конфиденциальности</a></li>
+            </ul>
+          </li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <a href="tel:+79312318555" class="header__phone">+7(931) 231-85-55</a>
+
+    <search class="search-overlay" id="searchOverlay">
+      <form class="search-form" action="/" method="GET">
+        <input
+          type="text"
+          name="s"
+          class="search-input"
+          id="searchInput"
+          placeholder="Поиск товара или бренда..."
+          autocomplete="off"
+          required
+        />
+        <input type="hidden" name="post_type" value="product" />
+        <button
+          type="button"
+          class="search-clear"
+          id="searchClear"
+          aria-label="Очистить поиск"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#icon-close"></use>
+          </svg>
+        </button>
+        <button type="submit" class="search-btn-submit" aria-label="Найти">
+          Поиск
+        </button>
+      </form>
+      <div class="search-results" id="searchResults">
+        <div class="search-loader" id="searchLoader"><span></span></div>
+        <div class="search-results-content" id="searchResultsContent">
+          <span class="search-section-title">Категории</span>
+          <ul class="search-categories-list">
+            <li>
+              <a href="#" class="search-category-link">
+                <div class="search-category-info">
+                  Сухой корм <span>Кошки</span>
+                </div>
+                <svg viewBox="0 0 10 10" aria-hidden="true">
+                  <use href="#icon-chevron-sm"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="search-category-link">
+                <div class="search-category-info">
+                  Наполнители <span>Кошки</span>
+                </div>
+                <svg viewBox="0 0 10 10" aria-hidden="true">
+                  <use href="#icon-chevron-sm"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="search-category-link">
+                <div class="search-category-info">
+                  Консервы в банках <span>Собаки</span>
+                </div>
+                <svg viewBox="0 0 10 10" aria-hidden="true">
+                  <use href="#icon-chevron-sm"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <br />
+          <span class="search-section-title">Товары</span>
+          <div class="search-products-list">
+            <a href="#" class="search-product-item">
+              <img
+                src="img/product-preview.png"
+                alt="Pro Plan Delicate Optirenal Lamb"
+                class="search-product-img"
+              />
+              <div class="search-product-info">
+                <div class="search-product-price-row">
+                  <span class="search-price">1200 ₽</span>
+                  <span class="search-old-price">1600 ₽</span>
+                </div>
+                <p class="search-product-title">
+                  Pro Plan Delicate Optirenal Lamb 3кг корм для взрослых кошек с
+                  чувствительным
+                </p>
+              </div>
+            </a>
+            <a href="#" class="search-product-item">
+              <img
+                src="img/product-preview.png"
+                alt="Pro Plan Delicate Optirenal Lamb"
+                class="search-product-img"
+              />
+              <div class="search-product-info">
+                <div class="search-product-price-row">
+                  <span class="search-price">1200 ₽</span>
+                </div>
+                <p class="search-product-title">
+                  Pro Plan Delicate Optirenal Lamb 3кг корм для взрослых кошек с
+                  чувствительным
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </search>
+
+    <div class="header__actions">
+      <button
+        class="action-btn"
+        id="searchTriggerBtn"
+        aria-label="Открыть поиск"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#icon-search"></use>
+        </svg>
+      </button>
+      <a
+        href="profile.html?tab=favorites"
+        class="action-btn fav-btn-mobile-hide"
+        aria-label="Избранное"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#icon-heart-head"></use>
+        </svg>
+        <span class="action-btn__badge">2</span>
+      </a>
+      <button class="action-btn" aria-label="Личный кабинет">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#icon-user"></use>
+        </svg>
+      </button>
+      <button class="action-btn" id="headerCartBtn" aria-label="Корзина">
+        <div class="action-btn__icon-wrapper">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#icon-cart"></use>
+          </svg>
+          <span class="action-btn__badge">12</span>
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <div class="mega-menu" id="megaMenu">
+    <div class="container mega-menu__container">
+      <ul class="mega-menu__sidebar">
+        <li class="menu-category active" data-tab="dogs">
+          <img src="img/menu/dog.png" alt="" /><span>Собаки</span>
+        </li>
+        <li class="menu-category" data-tab="cats">
+          <img src="img/menu/cat.png" alt="" /><span>Кошки</span>
+        </li>
+        <li class="menu-category" data-tab="rodents">
+          <img src="img/menu/ham.png" alt="" /><span>Грызуны</span>
+        </li>
+        <li class="menu-category" data-tab="birds">
+          <img src="img/menu/bird.png" alt="" /><span>Птицы</span>
+        </li>
+        <li class="menu-category" data-tab="fish">
+          <img src="img/menu/fish.png" alt="" /><span>Рыбки</span>
+        </li>
+        <li class="menu-category" data-tab="reptiles">
+          <img src="img/menu/turtle.png" alt="" /><span>Рептилии</span>
+        </li>
+        <li class="menu-category" data-tab="vet">
+          <img src="img/menu/pill.png" alt="" /><span>Ветеринарная аптека</span>
+        </li>
+        <li class="menu-category" data-tab="gifts">
+          <img src="img/menu/box.png" alt="" /><span
+            >Подарочный сертификат</span
+          >
+        </li>
+      </ul>
+      <div class="mega-menu__content">
+        <div class="tab-content active" id="dogs-content">
+          <div class="sub-cat-group">
+            <h3><a href="catalog.html">Сухие корма</a></h3>
+            <ul class="sub-cat-list">
+              <li><a href="#">Взрослые (1-6 лет)</a></li>
+              <li><a href="#">Щенки</a></li>
+              <li><a href="#">Пожилые (7+)</a></li>
+              <li><a href="#">Лечебный корм</a></li>
+              <li><a href="#">Для мелких пород</a></li>
+              <li><a href="#">Для крупных пород</a></li>
+              <li><a href="#">Гипоаллергенный</a></li>
+              <li><a href="#">Холистик</a></li>
+            </ul>
+          </div>
+          <div class="sub-cat-group">
+            <h3><a href="#">Консервы для собак</a></h3>
+            <ul class="sub-cat-list">
+              <li><a href="#">Паучи</a></li>
+              <li><a href="#">Консервы в банках</a></li>
+              <li><a href="#">Ветдиеты</a></li>
+            </ul>
+          </div>
+          <div class="sub-cat-group">
+            <h3><a href="#">Амуниция</a></h3>
+            <ul class="sub-cat-list">
+              <li><a href="#">Ошейники</a></li>
+              <li><a href="#">Поводки</a></li>
+              <li><a href="#">Рулетки</a></li>
+              <li><a href="#">Шлейки</a></li>
+              <li><a href="#">Намордники</a></li>
+              <li><a href="#">Адресники</a></li>
+              <li><a href="#">Сворки и цепи</a></li>
+              <li><a href="#">Карабины</a></li>
+              <li><a href="#">Ринговки</a></li>
+            </ul>
+          </div>
+          <div class="sub-cat-group">
+            <h3><a href="#">Миски и контейнеры</a></h3>
+            <ul class="sub-cat-list">
+              <li><a href="#">Миски напольные</a></li>
+              <li><a href="#">На подставке</a></li>
+              <li><a href="#">Автокормушки</a></li>
+              <li><a href="#">Коврики под миску</a></li>
+            </ul>
+          </div>
+          <div class="sub-cat-group">
+            <h3><a href="#">Лакомства</a></h3>
+            <ul class="sub-cat-list">
+              <li><a href="#">Кости и жилы</a></li>
+              <li><a href="#">Вяленое мясо</a></li>
+              <li><a href="#">Печенье</a></li>
+              <li><a href="#">Дропсы</a></li>
+            </ul>
+          </div>
+          <div class="sub-cat-group">
+            <h3><a href="#">Игрушки</a></h3>
+            <ul class="sub-cat-list">
+              <li><a href="#">Мячи</a></li>
+              <li><a href="#">Пуллеры</a></li>
+              <li><a href="#">Канаты</a></li>
+              <li><a href="#">Мягкие игрушки</a></li>
+            </ul>
+          </div>
+          <div class="sub-cat-group">
+            <h3><a href="#">Груминг</a></h3>
+            <ul class="sub-cat-list">
+              <li><a href="#">Шампуни</a></li>
+              <li><a href="#">Расчески и пуходерки</a></li>
+              <li><a href="#">Когтерезы</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="tab-content" id="cats-content">
+          <div class="sub-cat-group">
+            <h3><a href="catalog.html">Сухие корма</a></h3>
+            <ul class="sub-cat-list">
+              <li><a href="#">Взрослые (1-7 лет)</a></li>
+              <li><a href="#">Котята</a></li>
+              <li><a href="#">Стерилизованные</a></li>
+              <li><a href="#">Для вывода шерсти</a></li>
+              <li><a href="#">Чувствительное пищеварение</a></li>
+            </ul>
+          </div>
+          <div class="sub-cat-group">
+            <h3><a href="#">Влажные корма</a></h3>
+            <ul class="sub-cat-list">
+              <li><a href="#">Паучи в соусе</a></li>
+              <li><a href="#">Паучи в желе</a></li>
+              <li><a href="#">Консервы</a></li>
+              <li><a href="#">Ламистеры</a></li>
+            </ul>
+          </div>
+          <div class="sub-cat-group">
+            <h3><a href="#">Наполнители</a></h3>
+            <ul class="sub-cat-list">
+              <li><a href="#">Древесный</a></li>
+              <li><a href="#">Комкующийся</a></li>
+              <li><a href="#">Силикагелевый</a></li>
+              <li><a href="#">Впитывающий</a></li>
+            </ul>
+          </div>
+          <div class="sub-cat-group">
+            <h3><a href="#">Когтеточки и домики</a></h3>
+            <ul class="sub-cat-list">
+              <li><a href="#">Когтеточки-столбики</a></li>
+              <li><a href="#">Картонные когтеточки</a></li>
+              <li><a href="#">Игровые комплексы</a></li>
+              <li><a href="#">Лежанки</a></li>
+            </ul>
+          </div>
+          <div class="sub-cat-group">
+            <h3><a href="#">Лакомства для кошек</a></h3>
+            <ul class="sub-cat-list">
+              <li><a href="#">Подушечки</a></li>
+              <li><a href="#">Колбаски</a></li>
+              <li><a href="#">Пасты для вывода шерсти</a></li>
+              <li><a href="#">Травка для кошек</a></li>
+            </ul>
+          </div>
+          <div class="sub-cat-group">
+            <h3><a href="#">Игрушки</a></h3>
+            <ul class="sub-cat-list">
+              <li><a href="#">Мышки</a></li>
+              <li><a href="#">Удочки-дразнилки</a></li>
+              <li><a href="#">Интерактивные</a></li>
+              <li><a href="#">Мята и спреи</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="tab-content" id="rodents-content">
+          <div class="sub-cat-group">
+            <h3><a href="#">Корм для грызунов</a></h3>
+            <ul class="sub-cat-list">
+              <li><a href="#">Для хомяков</a></li>
+              <li><a href="#">Для морских свинок</a></li>
+              <li><a href="#">Для кроликов</a></li>
+              <li><a href="#">Для крыс и мышей</a></li>
+              <li><a href="#">Для шиншилл</a></li>
+            </ul>
+          </div>
+          <div class="sub-cat-group">
+            <h3><a href="#">Клетки и переноски</a></h3>
+            <ul class="sub-cat-list">
+              <li><a href="#">Клетки для мелких грызунов</a></li>
+              <li><a href="#">Клетки для кроликов</a></li>
+              <li><a href="#">Переноски</a></li>
+            </ul>
+          </div>
+          <div class="sub-cat-group">
+            <h3><a href="#">Наполнители</a></h3>
+            <ul class="sub-cat-list">
+              <li><a href="#">Опилки</a></li>
+              <li><a href="#">Сено</a></li>
+              <li><a href="#">Древесные гранулы</a></li>
+            </ul>
+          </div>
+          <div class="sub-cat-group">
+            <h3><a href="#">Аксессуары</a></h3>
+            <ul class="sub-cat-list">
+              <li><a href="#">Поилки и кормушки</a></li>
+              <li><a href="#">Домики и гамаки</a></li>
+              <li><a href="#">Колеса и шары</a></li>
+              <li><a href="#">Минеральные камни</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="tab-content" id="birds-content">
+          <div class="sub-cat-group">
+            <h3><a href="#">Корм для птиц</a></h3>
+            <ul class="sub-cat-list">
+              <li><a href="#">Для волнистых попугаев</a></li>
+              <li><a href="#">Для средних попугаев</a></li>
+              <li><a href="#">Для крупных попугаев</a></li>
+              <li><a href="#">Для канареек</a></li>
+            </ul>
+          </div>
+          <div class="sub-cat-group">
+            <h3><a href="#">Клетки</a></h3>
+            <ul class="sub-cat-list">
+              <li><a href="#">Круглые</a></li>
+              <li><a href="#">Прямоугольные</a></li>
+              <li><a href="#">Подставки под клетки</a></li>
+            </ul>
+          </div>
+          <div class="sub-cat-group">
+            <h3><a href="#">Лакомства и витамины</a></h3>
+            <ul class="sub-cat-list">
+              <li><a href="#">Палочки зерновые</a></li>
+              <li><a href="#">Мел и камни</a></li>
+              <li><a href="#">Песок и гравий</a></li>
+              <li><a href="#">Игрушки и зеркала</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="tab-content" id="fish-content">
+          <div class="sub-cat-group">
+            <h3><a href="#">Корм для рыб</a></h3>
+            <ul class="sub-cat-list">
+              <li><a href="#">Хлопья</a></li>
+              <li><a href="#">Гранулы</a></li>
+              <li><a href="#">Таблетки (для сомов)</a></li>
+              <li><a href="#">Корм выходного дня</a></li>
+            </ul>
+          </div>
+          <div class="sub-cat-group">
+            <h3><a href="#">Аквариумы и тумбы</a></h3>
+            <ul class="sub-cat-list">
+              <li><a href="#">Аквариумы с крышкой</a></li>
+              <li><a href="#">Нано-аквариумы</a></li>
+              <li><a href="#">Тумбы</a></li>
+            </ul>
+          </div>
+          <div class="sub-cat-group">
+            <h3><a href="#">Оборудование</a></h3>
+            <ul class="sub-cat-list">
+              <li><a href="#">Фильтры внутренние</a></li>
+              <li><a href="#">Компрессоры</a></li>
+              <li><a href="#">Обогреватели</a></li>
+              <li><a href="#">Сачки и сифоны</a></li>
+              <li><a href="#">Декорации и грунт</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="tab-content" id="reptiles-content">
+          <div class="sub-cat-group">
+            <h3><a href="#">Для черепах</a></h3>
+            <ul class="sub-cat-list">
+              <li><a href="#">Корм для водных</a></li>
+              <li><a href="#">Корм для сухопутных</a></li>
+              <li><a href="#">Островки</a></li>
+            </ul>
+          </div>
+          <div class="sub-cat-group">
+            <h3><a href="#">Террариумистика</a></h3>
+            <ul class="sub-cat-list">
+              <li><a href="#">Террариумы</a></li>
+              <li><a href="#">Лампы УФ</a></li>
+              <li><a href="#">Греющие коврики</a></li>
+              <li><a href="#">Грунт и декор</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="tab-content" id="vet-content">
+          <div class="sub-cat-group">
+            <h3><a href="#">От паразитов</a></h3>
+            <ul class="sub-cat-list">
+              <li><a href="#">От блох и клещей</a></li>
+              <li><a href="#">От глистов</a></li>
+              <li><a href="#">Капли на холку</a></li>
+              <li><a href="#">Таблетки</a></li>
+              <li><a href="#">Ошейники</a></li>
+            </ul>
+          </div>
+          <div class="sub-cat-group">
+            <h3><a href="#">Лечение и уход</a></h3>
+            <ul class="sub-cat-list">
+              <li><a href="#">Витамины</a></li>
+              <li><a href="#">Для суставов</a></li>
+              <li><a href="#">Лосьоны для ушей/глаз</a></li>
+              <li><a href="#">Послеоперационные попоны</a></li>
+              <li><a href="#">Воротники</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="tab-content" id="gifts-content">
+          <div class="sub-cat-group">
+            <h3><a href="#">Подарочные карты</a></h3>
+            <ul class="sub-cat-list">
+              <li><a href="#">Номинал 500 ₽</a></li>
+              <li><a href="#">Номинал 1000 ₽</a></li>
+              <li><a href="#">Номинал 3000 ₽</a></li>
+              <li><a href="#">Номинал 5000 ₽</a></li>
+              <li><a href="#">Электронный сертификат</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="mobile-mega-menu"
+    id="mobileMegaMenu"
+    style="visibility: hidden; opacity: 0; transition: 0.3s"
+  >
+    <div class="mobile-menu__panel active" id="mobile-panel-main">
+      <ul class="mobile-menu__list">
+        <li>
+          <button class="menu-trigger" data-target="mobile-panel-catalog">
+            Каталог
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </button>
+        </li>
+        <li><a href="#">Подарочные карты</a></li>
+        <li><a href="#">SOS-помощь</a></li>
+        <li><a href="#">Акции</a></li>
+        <li><a href="#">Возврат товара</a></li>
+        <li><a href="#">Доставка и оплата</a></li>
+        <li><a href="privacy.html">Политика конфиденциальности</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+    </div>
+
+    <div class="mobile-menu__panel" id="mobile-panel-catalog">
+      <button class="mobile-menu__back">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#icon-chevron-left"></use>
+        </svg>
+        Каталог
+      </button>
+      <ul class="mobile-menu__list">
+        <li>
+          <button class="menu-trigger" data-target="mobile-panel-dogs">
+            <div class="mobile-menu__cat-icon">
+              <img src="img/menu/dog.png" alt="" /> Собаки
+            </div>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button class="menu-trigger" data-target="mobile-panel-cats">
+            <div class="mobile-menu__cat-icon">
+              <img src="img/menu/cat.png" alt="" /> Кошки
+            </div>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button class="menu-trigger" data-target="mobile-panel-rodents">
+            <div class="mobile-menu__cat-icon">
+              <img src="img/menu/ham.png" alt="" /> Грызуны
+            </div>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button class="menu-trigger" data-target="mobile-panel-birds">
+            <div class="mobile-menu__cat-icon">
+              <img src="img/menu/bird.png" alt="" /> Птицы
+            </div>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button class="menu-trigger" data-target="mobile-panel-fish">
+            <div class="mobile-menu__cat-icon">
+              <img src="img/menu/fish.png" alt="" /> Рыбки
+            </div>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button class="menu-trigger" data-target="mobile-panel-reptiles">
+            <div class="mobile-menu__cat-icon">
+              <img src="img/menu/turtle.png" alt="" /> Рептилии
+            </div>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button class="menu-trigger" data-target="mobile-panel-vet">
+            <div class="mobile-menu__cat-icon">
+              <img src="img/menu/pill.png" alt="" /> Ветеринарная аптека
+            </div>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button class="menu-trigger" data-target="mobile-panel-gifts">
+            <div class="mobile-menu__cat-icon">
+              <img src="img/menu/box.png" alt="" /> Подарочный сертификат
+            </div>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button class="menu-trigger" style="font-weight: 700">
+            Посмотреть все
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="mobile-menu__panel" id="mobile-panel-dogs">
+      <button class="mobile-menu__back">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#icon-chevron-left"></use>
+        </svg>
+        Собаки
+      </button>
+      <ul class="mobile-menu__list">
+        <li>
+          <a href="#"
+            >Сухой корм
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            >Консервы для собак
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            >Амуниция
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            >Миски и контейнеры
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            >Лакомства
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            >Игрушки
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            >Груминг
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="mobile-menu__panel" id="mobile-panel-cats">
+      <button class="mobile-menu__back">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#icon-chevron-left"></use>
+        </svg>
+        Кошки
+      </button>
+      <ul class="mobile-menu__list">
+        <li>
+          <a href="#"
+            >Сухой корм
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            >Влажные корма
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            >Наполнители
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            >Когтеточки и домики
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            >Лакомства для кошек
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            >Игрушки
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="mobile-menu__panel" id="mobile-panel-rodents">
+      <button class="mobile-menu__back">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#icon-chevron-left"></use>
+        </svg>
+        Грызуны
+      </button>
+      <ul class="mobile-menu__list">
+        <li>
+          <a href="#"
+            >Корм для грызунов
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            >Клетки и переноски
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            >Наполнители
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            >Аксессуары
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="mobile-menu__panel" id="mobile-panel-birds">
+      <button class="mobile-menu__back">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#icon-chevron-left"></use>
+        </svg>
+        Птицы
+      </button>
+      <ul class="mobile-menu__list">
+        <li>
+          <a href="#"
+            >Корм для птиц
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            >Клетки
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            >Лакомства и витамины
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="mobile-menu__panel" id="mobile-panel-fish">
+      <button class="mobile-menu__back">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#icon-chevron-left"></use>
+        </svg>
+        Рыбки
+      </button>
+      <ul class="mobile-menu__list">
+        <li>
+          <a href="#"
+            >Корм для рыб
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            >Аквариумы и тумбы
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            >Оборудование
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="mobile-menu__panel" id="mobile-panel-reptiles">
+      <button class="mobile-menu__back">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#icon-chevron-left"></use>
+        </svg>
+        Рептилии
+      </button>
+      <ul class="mobile-menu__list">
+        <li>
+          <a href="#"
+            >Для черепах
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            >Террариумистика
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="mobile-menu__panel" id="mobile-panel-vet">
+      <button class="mobile-menu__back">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#icon-chevron-left"></use>
+        </svg>
+        Ветеринарная аптека
+      </button>
+      <ul class="mobile-menu__list">
+        <li>
+          <a href="#"
+            >От паразитов
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            >Лечение и уход
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="mobile-menu__panel" id="mobile-panel-gifts">
+      <button class="mobile-menu__back">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#icon-chevron-left"></use>
+        </svg>
+        Подарочный сертификат
+      </button>
+      <ul class="mobile-menu__list">
+        <li>
+          <a href="#"
+            >Номинал 500 ₽
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            >Номинал 1000 ₽
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            >Номинал 3000 ₽
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            >Номинал 5000 ₽
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            >Электронный сертификат
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-chevron-right"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>

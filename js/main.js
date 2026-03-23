@@ -1,0 +1,33 @@
+import { initNavigation } from "./modules/navigation.js";
+import { initSearch } from "./modules/search.js";
+import { initSliders } from "./modules/sliders.js";
+import { initFilters } from "./modules/filters.js";
+import { initProductCards } from "./modules/productCards.js";
+import { initScrollableAreas } from "./modules/scrollable.js";
+import { initFab } from "./modules/fab.js";
+import { initGlobalClickHandlers } from "./modules/globalHandlers.js";
+import { initContactsMap } from "./modules/map.js";
+import { initAuthModal } from "./modules/auth.js";
+import { initCartLogic } from "./modules/cart.js";
+import { initCheckout } from "./modules/checkout.js";
+import { initProductPageLogic } from "./modules/productPage.js";
+import { initMasks } from "./modules/masks.js";
+import { initProfileTabs } from "./modules/profile.js";
+
+document.addEventListener("DOMContentLoaded", () => {
+  initNavigation();
+  initSearch();
+  initSliders();
+  initFilters();
+  initProductCards();
+  initScrollableAreas();
+  initFab();
+  initGlobalClickHandlers();
+  initContactsMap();
+  initAuthModal();
+  initCartLogic();
+  initCheckout();
+  initProductPageLogic();
+  initMasks();
+  initProfileTabs();
+});

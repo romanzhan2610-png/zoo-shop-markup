@@ -1,0 +1,1034 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    {{> head }}
+  </head>
+  <body>
+{{> header }}
+    <main class="page-catalog">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+          <a href="#">Главная</a>
+          <svg
+            class="breadcrumb-separator"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <use href="#icon-paw"></use>
+          </svg>
+          <a href="#">Кошки</a>
+          <svg
+            class="breadcrumb-separator"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <use href="#icon-paw"></use>
+          </svg>
+          <span aria-current="page">Сухой корм</span>
+        </nav>
+
+        <h1 class="page-title">Сухой корм</h1>
+
+        <div class="subcategories-wrapper">
+          <button
+            class="subcategories-nav prev"
+            id="subcatPrev"
+            aria-label="Назад"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-slider-prev"></use>
+            </svg>
+          </button>
+          <div class="subcategories-scroll-area" id="subcatList">
+            <a href="#" class="subcategory-pill active">
+              <img src="img/cat-sub-1.png" alt="" loading="lazy" />
+              <span>Взрослые (1-6 лет)</span>
+            </a>
+            <a href="#" class="subcategory-pill">
+              <img src="img/cat-sub-2.png" alt="" loading="lazy" />
+              <span>Котята и беременные кошки</span>
+            </a>
+            <a href="#" class="subcategory-pill">
+              <img src="img/cat-sub-3.png" alt="" loading="lazy" />
+              <span>Пожилые (7+)</span>
+            </a>
+            <a href="#" class="subcategory-pill">
+              <img src="img/cat-sub-4.png" alt="" loading="lazy" />
+              <span>Лечебные корма</span>
+            </a>
+            <a href="#" class="subcategory-pill">
+              <img src="img/cat-sub-1.png" alt="" loading="lazy" />
+              <span>Sterilised</span>
+            </a>
+            <a href="#" class="subcategory-pill">
+              <img src="img/cat-sub-2.png" alt="" loading="lazy" />
+              <span>Derma</span>
+            </a>
+            <a href="#" class="subcategory-pill">
+              <img src="img/cat-sub-3.png" alt="" loading="lazy" />
+              <span>Delicate</span>
+            </a>
+          </div>
+          <button
+            class="subcategories-nav next"
+            id="subcatNext"
+            aria-label="Вперед"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-slider-next"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="filters-panel">
+          <div class="filters-layout">
+            <div class="filters-scroll-window">
+              <button
+                class="filters-nav prev"
+                id="filtersPrev"
+                aria-label="Назад"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#icon-slider-prev"></use>
+                </svg>
+              </button>
+
+              <div class="filters-scroll-area" id="filtersList">
+                <div class="filter-dropdown" data-filter-type="sort">
+                  <button class="filter-btn dropdown-trigger">
+                    <span class="filter-btn__icon-sort">
+                      <svg
+                        viewBox="0 0 16 16"
+                        width="16"
+                        height="16"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M4.5 13.5v-11m0 0L2 5m2.5-2.5L7 5m4.5-2.5v11m0 0L9 11m2.5 2.5L14 11"
+                        />
+                      </svg>
+                    </span>
+                    <span class="filter-btn__text">По популярности</span>
+                  </button>
+                  <div class="filter-popover">
+                    <div class="filter-options-scroll">
+                      <label class="custom-radio">
+                        <input
+                          type="radio"
+                          name="sort"
+                          value="popular"
+                          checked
+                        />
+                        <span class="radio-box"
+                          ><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <use href="#icon-paw"></use></svg
+                        ></span>
+                        <span class="text">По популярности</span>
+                      </label>
+                      <label class="custom-radio">
+                        <input type="radio" name="sort" value="cheap" />
+                        <span class="radio-box"
+                          ><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <use href="#icon-paw"></use></svg
+                        ></span>
+                        <span class="text">Сначала дешевле</span>
+                      </label>
+                      <label class="custom-radio">
+                        <input type="radio" name="sort" value="expensive" />
+                        <span class="radio-box"
+                          ><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <use href="#icon-paw"></use></svg
+                        ></span>
+                        <span class="text">Сначала дороже</span>
+                      </label>
+                    </div>
+                    <div class="filter-actions-right">
+                      <button class="btn-solid-apply close-dropdown">
+                        ГОТОВО
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="filter-dropdown" data-filter-type="checkbox">
+                  <button class="filter-btn dropdown-trigger">
+                    <span class="filter-btn__text">Бренд</span>
+                    <span class="filter-btn__badge">0</span>
+                    <svg
+                      class="filter-btn__chevron"
+                      viewBox="0 0 10 6"
+                      aria-hidden="true"
+                    >
+                      <use href="#icon-dropdown"></use>
+                    </svg>
+                  </button>
+                  <div class="filter-popover">
+                    <div class="filter-search">
+                      <input type="text" placeholder="Поиск" />
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#icon-search"></use>
+                      </svg>
+                    </div>
+                    <div class="filter-options-scroll">
+                      <label class="custom-checkbox"
+                        ><input type="checkbox" /><span class="box"
+                          ><svg viewBox="0 0 24 24">
+                            <use href="#icon-paw"></use></svg></span
+                        ><span class="text">AlphaPet</span></label
+                      >
+                      <label class="custom-checkbox"
+                        ><input type="checkbox" /><span class="box"
+                          ><svg viewBox="0 0 24 24">
+                            <use href="#icon-paw"></use></svg></span
+                        ><span class="text">Best Dinner</span></label
+                      >
+                      <label class="custom-checkbox"
+                        ><input type="checkbox" /><span class="box"
+                          ><svg viewBox="0 0 24 24">
+                            <use href="#icon-paw"></use></svg></span
+                        ><span class="text">Brit Premium</span></label
+                      >
+                      <label class="custom-checkbox"
+                        ><input type="checkbox" /><span class="box"
+                          ><svg viewBox="0 0 24 24">
+                            <use href="#icon-paw"></use></svg></span
+                        ><span class="text">Brooksfield</span></label
+                      >
+                      <label class="custom-checkbox"
+                        ><input type="checkbox" /><span class="box"
+                          ><svg viewBox="0 0 24 24">
+                            <use href="#icon-paw"></use></svg></span
+                        ><span class="text">Brava</span></label
+                      >
+                      <label class="custom-checkbox"
+                        ><input type="checkbox" /><span class="box"
+                          ><svg viewBox="0 0 24 24">
+                            <use href="#icon-paw"></use></svg></span
+                        ><span class="text">Brit Care</span></label
+                      >
+                    </div>
+                    <div class="filter-actions">
+                      <button class="btn-text-reset clear-filter">
+                        Сбросить
+                      </button>
+                      <button class="btn-solid-apply close-dropdown">
+                        ГОТОВО
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="filter-dropdown" data-filter-type="range">
+                  <button class="filter-btn dropdown-trigger">
+                    <span class="filter-btn__text">Цена</span>
+                    <span class="filter-btn__badge">0</span>
+                    <svg
+                      class="filter-btn__chevron"
+                      viewBox="0 0 10 6"
+                      aria-hidden="true"
+                    >
+                      <use href="#icon-dropdown"></use>
+                    </svg>
+                  </button>
+                  <div class="filter-popover">
+                    <div
+                      class="range-slider-wrap"
+                      data-min="0"
+                      data-max="5000"
+                      data-step="10"
+                    >
+                      <div class="range-track">
+                        <div class="range-fill"></div>
+                      </div>
+                      <input
+                        type="range"
+                        class="range-thumb-min"
+                        value="0"
+                        min="0"
+                        max="5000"
+                        step="10"
+                      />
+                      <input
+                        type="range"
+                        class="range-thumb-max"
+                        value="5000"
+                        min="0"
+                        max="5000"
+                        step="10"
+                      />
+
+                      <div class="range-inputs">
+                        <div class="input-group">
+                          <span>От</span>
+                          <input type="number" class="input-min" value="0" />
+                        </div>
+                        <div class="divider">—</div>
+                        <div class="input-group">
+                          <span>До</span>
+                          <input type="number" class="input-max" value="5000" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter-actions mt-20">
+                      <button class="btn-text-reset clear-filter">
+                        Сбросить
+                      </button>
+                      <button class="btn-solid-apply close-dropdown">
+                        ГОТОВО
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="filter-dropdown" data-filter-type="range">
+                  <button class="filter-btn dropdown-trigger">
+                    <span class="filter-btn__text">Вес/объем</span>
+                    <span class="filter-btn__badge">0</span>
+                    <svg
+                      class="filter-btn__chevron"
+                      viewBox="0 0 10 6"
+                      aria-hidden="true"
+                    >
+                      <use href="#icon-dropdown"></use>
+                    </svg>
+                  </button>
+                  <div class="filter-popover">
+                    <div
+                      class="range-slider-wrap"
+                      data-min="0"
+                      data-max="15"
+                      data-step="0.1"
+                    >
+                      <div class="range-track">
+                        <div class="range-fill"></div>
+                      </div>
+                      <input
+                        type="range"
+                        class="range-thumb-min"
+                        value="0"
+                        min="0"
+                        max="15"
+                        step="0.1"
+                      />
+                      <input
+                        type="range"
+                        class="range-thumb-max"
+                        value="15"
+                        min="0"
+                        max="15"
+                        step="0.1"
+                      />
+
+                      <div class="range-inputs">
+                        <div class="input-group">
+                          <span>От</span>
+                          <input
+                            type="number"
+                            class="input-min"
+                            value="0"
+                            step="0.1"
+                          />
+                        </div>
+                        <div class="divider">—</div>
+                        <div class="input-group">
+                          <span>До</span>
+                          <input
+                            type="number"
+                            class="input-max"
+                            value="15"
+                            step="0.1"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter-actions mt-20">
+                      <button class="btn-text-reset clear-filter">
+                        Сбросить
+                      </button>
+                      <button class="btn-solid-apply close-dropdown">
+                        ГОТОВО
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="filter-dropdown" data-filter-type="checkbox">
+                  <button class="filter-btn dropdown-trigger">
+                    <span class="filter-btn__text">Показания</span>
+                    <span class="filter-btn__badge">0</span>
+                    <svg
+                      class="filter-btn__chevron"
+                      viewBox="0 0 10 6"
+                      aria-hidden="true"
+                    >
+                      <use href="#icon-dropdown"></use>
+                    </svg>
+                  </button>
+                  <div class="filter-popover">
+                    <div class="filter-options-scroll">
+                      <label class="custom-checkbox"
+                        ><input type="checkbox" /><span class="box"
+                          ><svg viewBox="0 0 24 24">
+                            <use href="#icon-paw"></use></svg></span
+                        ><span class="text">Стерилизованные</span></label
+                      >
+                      <label class="custom-checkbox"
+                        ><input type="checkbox" /><span class="box"
+                          ><svg viewBox="0 0 24 24">
+                            <use href="#icon-paw"></use></svg></span
+                        ><span class="text">Нарушение пищеварения</span></label
+                      >
+                      <label class="custom-checkbox"
+                        ><input type="checkbox" /><span class="box"
+                          ><svg viewBox="0 0 24 24">
+                            <use href="#icon-paw"></use></svg></span
+                        ><span class="text">Пищевая аллергия</span></label
+                      >
+                    </div>
+                    <div class="filter-actions">
+                      <button class="btn-text-reset clear-filter">
+                        Сбросить
+                      </button>
+                      <button class="btn-solid-apply close-dropdown">
+                        ГОТОВО
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="filter-dropdown" data-filter-type="checkbox">
+                  <button class="filter-btn dropdown-trigger">
+                    <span class="filter-btn__text">Другое</span>
+                    <span class="filter-btn__badge">0</span>
+                    <svg
+                      class="filter-btn__chevron"
+                      viewBox="0 0 10 6"
+                      aria-hidden="true"
+                    >
+                      <use href="#icon-dropdown"></use>
+                    </svg>
+                  </button>
+                  <div class="filter-popover">
+                    <div class="filter-options-scroll">
+                      <label class="custom-checkbox"
+                        ><input type="checkbox" /><span class="box"
+                          ><svg viewBox="0 0 24 24">
+                            <use href="#icon-paw"></use></svg></span
+                        ><span class="text">Новинки</span></label
+                      >
+                      <label class="custom-checkbox"
+                        ><input type="checkbox" /><span class="box"
+                          ><svg viewBox="0 0 24 24">
+                            <use href="#icon-paw"></use></svg></span
+                        ><span class="text">Акции</span></label
+                      >
+                      <label class="custom-checkbox"
+                        ><input type="checkbox" /><span class="box"
+                          ><svg viewBox="0 0 24 24">
+                            <use href="#icon-paw"></use></svg></span
+                        ><span class="text">В наличии</span></label
+                      >
+                    </div>
+                    <div class="filter-actions">
+                      <button class="btn-text-reset clear-filter">
+                        Сбросить
+                      </button>
+                      <button class="btn-solid-apply close-dropdown">
+                        ГОТОВО
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="filter-dropdown" data-filter-type="checkbox">
+                  <button class="filter-btn dropdown-trigger">
+                    <span class="filter-btn__text">Размер собак</span>
+                    <span class="filter-btn__badge">0</span>
+                    <svg
+                      class="filter-btn__chevron"
+                      viewBox="0 0 10 6"
+                      aria-hidden="true"
+                    >
+                      <use href="#icon-dropdown"></use>
+                    </svg>
+                  </button>
+                  <div class="filter-popover">
+                    <div class="filter-options-scroll">
+                      <label class="custom-checkbox"
+                        ><input type="checkbox" /><span class="box"
+                          ><svg viewBox="0 0 24 24">
+                            <use href="#icon-paw"></use></svg></span
+                        ><span class="text">Mini - для мелких</span></label
+                      >
+                      <label class="custom-checkbox"
+                        ><input type="checkbox" /><span class="box"
+                          ><svg viewBox="0 0 24 24">
+                            <use href="#icon-paw"></use></svg></span
+                        ><span class="text">Medium - для средних</span></label
+                      >
+                      <label class="custom-checkbox"
+                        ><input type="checkbox" /><span class="box"
+                          ><svg viewBox="0 0 24 24">
+                            <use href="#icon-paw"></use></svg></span
+                        ><span class="text">Maxi - для крупных</span></label
+                      >
+                    </div>
+                    <div class="filter-actions">
+                      <button class="btn-text-reset clear-filter">
+                        Сбросить
+                      </button>
+                      <button class="btn-solid-apply close-dropdown">
+                        ГОТОВО
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="filter-dropdown" data-filter-type="checkbox">
+                  <button class="filter-btn dropdown-trigger">
+                    <span class="filter-btn__text">Экстренная ситуация</span>
+                    <span class="filter-btn__badge">0</span>
+                    <svg
+                      class="filter-btn__chevron"
+                      viewBox="0 0 10 6"
+                      aria-hidden="true"
+                    >
+                      <use href="#icon-dropdown"></use>
+                    </svg>
+                  </button>
+                  <div class="filter-popover">
+                    <div class="filter-options-scroll">
+                      <label class="custom-checkbox"
+                        ><input type="checkbox" /><span class="box"
+                          ><svg viewBox="0 0 24 24">
+                            <use href="#icon-paw"></use></svg></span
+                        ><span class="text">Отравление</span></label
+                      >
+                      <label class="custom-checkbox"
+                        ><input type="checkbox" /><span class="box"
+                          ><svg viewBox="0 0 24 24">
+                            <use href="#icon-paw"></use></svg></span
+                        ><span class="text">Воспаление</span></label
+                      >
+                      <label class="custom-checkbox"
+                        ><input type="checkbox" /><span class="box"
+                          ><svg viewBox="0 0 24 24">
+                            <use href="#icon-paw"></use></svg></span
+                        ><span class="text">Сыпь/покраснение</span></label
+                      >
+                    </div>
+                    <div class="filter-actions">
+                      <button class="btn-text-reset clear-filter">
+                        Сбросить
+                      </button>
+                      <button class="btn-solid-apply close-dropdown">
+                        ГОТОВО
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="filters-nav next"
+                id="filtersNext"
+                aria-label="Вперед"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#icon-slider-next"></use>
+                </svg>
+              </button>
+            </div>
+
+            <button class="btn-global-reset" id="resetAllFilters">
+              Сбросить фильтры
+            </button>
+          </div>
+        </div>
+
+        <div class="catalog-grid">
+          <div class="product-card">
+            <button class="product-card__fav" aria-label="В избранное">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <use href="#icon-heart"></use>
+              </svg>
+            </button>
+            <div class="product-card__image-wrap">
+              <img
+                src="img/3-1.png"
+                alt="Pro Plan"
+                class="product-card__img"
+                loading="lazy"
+              />
+              <div class="product-card__labels">
+                <span class="product-label label-new">Новинка</span>
+              </div>
+            </div>
+            <div class="product-card__price-wrap">
+              <span class="product-card__price">1200 ₽</span>
+            </div>
+            <a href="product.html" class="product-card__title"
+              >Pro Plan Delicate Optirenal Lamb 3кг корм для взрослых кошек</a
+            >
+            <div class="product-card__vars">
+              <span class="product-var" data-variant-id="1">250 г</span>
+              <span class="product-var active" data-variant-id="1">500 г</span>
+              <span class="product-var" data-variant-id="1">1 кг</span>
+              <span class="product-var" data-variant-id="1">2 кг</span>
+            </div>
+            <div class="product-card__bottom">
+              <span class="availability-text"
+                >Наличие: <br /><a href="#" class="availability-link"
+                  >в 2 магазинах</a
+                ></span
+              >
+              <button class="btn-add-cart-desktop btn-add-cart-desktop-mobile" data-product-id="1">В КОРЗИНУ</button>
+              <button
+                class="btn-add-cart-mobile"
+                aria-label="Добавить в корзину"
+              >
+                <span class="btn-add-cart__plus"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    width="20"
+                    height="20"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                  >
+                    <path d="M12 5v14M5 12h14" /></svg
+                ></span>
+                <span class="btn-add-cart__icon"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="#icon-cart"></use></svg
+                ></span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <button class="product-card__fav" aria-label="В избранное">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <use href="#icon-heart"></use>
+              </svg>
+            </button>
+            <div class="product-card__image-wrap">
+              <img
+                src="img/3-2.png"
+                alt="Pro Plan"
+                class="product-card__img"
+                loading="lazy"
+              />
+              <div class="product-card__labels">
+                <span class="product-label label-sale">Акция</span>
+              </div>
+            </div>
+            <div class="product-card__price-wrap">
+              <span class="product-card__price">1200 ₽</span>
+              <span class="product-card__old-price">1600 ₽</span>
+            </div>
+            <a href="product.html" class="product-card__title"
+              >Pro Plan Delicate Optirenal Lamb 3кг корм для взрослых кошек</a
+            >
+            <div class="product-card__vars">
+              <span class="product-var" data-variant-id="1">250 г</span>
+              <span class="product-var active" data-variant-id="1">500 г</span>
+              <span class="product-var" data-variant-id="1">1 кг</span>
+              <span class="product-var" data-variant-id="1">2 кг</span>
+            </div>
+            <div class="product-card__bottom">
+              <span class="availability-text" style="color: var(--text-gray)"
+                >Под заказ</span
+              >
+              <button class="btn-add-cart-desktop btn-add-cart-desktop-mobile" data-product-id="1">В КОРЗИНУ</button>
+              <button
+                class="btn-add-cart-mobile"
+                aria-label="Добавить в корзину"
+              >
+                <span class="btn-add-cart__plus"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    width="20"
+                    height="20"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                  >
+                    <path d="M12 5v14M5 12h14" /></svg
+                ></span>
+                <span class="btn-add-cart__icon"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="#icon-cart"></use></svg
+                ></span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <button class="product-card__fav">
+              <svg viewBox="0 0 24 24">
+                <use href="#icon-heart"></use>
+              </svg>
+            </button>
+            <div class="product-card__image-wrap">
+              <img src="img/3-3.png" class="product-card__img" loading="lazy" />
+            </div>
+            <div class="product-card__price-wrap">
+              <span class="product-card__price">850 ₽</span>
+            </div>
+            <a href="product.html" class="product-card__title"
+              >Влажный корм премиум индейка с бурым рисом</a
+            >
+            <div class="product-card__vars">
+              <span class="product-var active" data-variant-id="1">340 г</span>
+            </div>
+            <div class="product-card__bottom">
+              <span class="availability-text"
+                >Наличие: <br /><a href="#" class="availability-link"
+                  >в 2 магазинах</a
+                ></span
+              ><button class="btn-add-cart-desktop btn-add-cart-desktop-mobile" data-product-id="1">В КОРЗИНУ</button
+              ><button class="btn-add-cart-mobile" data-product-id="1">
+                <span class="btn-add-cart__plus"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    width="20"
+                    height="20"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                  >
+                    <path d="M12 5v14M5 12h14" /></svg></span
+                ><span class="btn-add-cart__icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="#icon-cart"></use></svg
+                ></span>
+              </button>
+            </div>
+          </div>
+          <div class="product-card">
+            <button class="product-card__fav">
+              <svg viewBox="0 0 24 24">
+                <use href="#icon-heart"></use>
+              </svg>
+            </button>
+            <div class="product-card__image-wrap">
+              <img src="img/3-4.png" class="product-card__img" loading="lazy" />
+            </div>
+            <div class="product-card__price-wrap">
+              <span class="product-card__price">1100 ₽</span>
+            </div>
+            <a href="product.html" class="product-card__title"
+              >MAX&MOLLY, Комбинированная игрушка</a
+            >
+            <div class="product-card__vars"></div>
+            <div class="product-card__bottom">
+              <span class="availability-text"
+                >Наличие: <br /><a href="#" class="availability-link"
+                  >в 2 магазинах</a
+                ></span
+              ><button class="btn-add-cart-desktop btn-add-cart-desktop-mobile" data-product-id="1">В КОРЗИНУ</button
+              ><button class="btn-add-cart-mobile" data-product-id="1">
+                <span class="btn-add-cart__plus"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    width="20"
+                    height="20"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                  >
+                    <path d="M12 5v14M5 12h14" /></svg></span
+                ><span class="btn-add-cart__icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="#icon-cart"></use></svg
+                ></span>
+              </button>
+            </div>
+          </div>
+          <div class="product-card">
+            <button class="product-card__fav">
+              <svg viewBox="0 0 24 24">
+                <use href="#icon-heart"></use>
+              </svg>
+            </button>
+            <div class="product-card__image-wrap">
+              <img src="img/3-5.png" class="product-card__img" loading="lazy" />
+              <div class="product-card__labels">
+                <span class="product-label label-sale">Акция</span>
+              </div>
+            </div>
+            <div class="product-card__price-wrap">
+              <span class="product-card__price">850 ₽</span
+              ><span class="product-card__old-price">1200 ₽</span>
+            </div>
+            <a href="product.html" class="product-card__title"
+              >Когтеточка угловая из гофрокартона</a
+            >
+            <div class="product-card__vars">
+              <span class="product-var active" data-variant-id="1">Стандарт</span>
+            </div>
+            <div class="product-card__bottom">
+              <span class="availability-text">Под заказ</span
+              ><button class="btn-add-cart-desktop btn-add-cart-desktop-mobile" data-product-id="1">В КОРЗИНУ</button
+              ><button class="btn-add-cart-mobile" data-product-id="1">
+                <span class="btn-add-cart__plus"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    width="20"
+                    height="20"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                  >
+                    <path d="M12 5v14M5 12h14" /></svg></span
+                ><span class="btn-add-cart__icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="#icon-cart"></use></svg
+                ></span>
+              </button>
+            </div>
+          </div>
+          <div class="product-card">
+            <button class="product-card__fav">
+              <svg viewBox="0 0 24 24">
+                <use href="#icon-heart"></use>
+              </svg>
+            </button>
+            <div class="product-card__image-wrap">
+              <img src="img/3-6.png" class="product-card__img" loading="lazy" />
+            </div>
+            <div class="product-card__price-wrap">
+              <span class="product-card__price">550 ₽</span>
+            </div>
+            <a href="product.html" class="product-card__title"
+              >Шампунь для кошек и собак гипоаллергенный</a
+            >
+            <div class="product-card__vars">
+              <span class="product-var active" data-variant-id="1">250 мл</span>
+            </div>
+            <div class="product-card__bottom">
+              <span class="availability-text"
+                >Наличие: <br /><a href="#" class="availability-link"
+                  >в 2 магазинах</a
+                ></span
+              ><button class="btn-add-cart-desktop btn-add-cart-desktop-mobile" data-product-id="1">В КОРЗИНУ</button
+              ><button class="btn-add-cart-mobile" data-product-id="1">
+                <span class="btn-add-cart__plus"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    width="20"
+                    height="20"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                  >
+                    <path d="M12 5v14M5 12h14" /></svg></span
+                ><span class="btn-add-cart__icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="#icon-cart"></use></svg
+                ></span>
+              </button>
+            </div>
+          </div>
+          <div class="product-card">
+            <button class="product-card__fav">
+              <svg viewBox="0 0 24 24">
+                <use href="#icon-heart"></use>
+              </svg>
+            </button>
+            <div class="product-card__image-wrap">
+              <img src="img/3-1.png" class="product-card__img" loading="lazy" />
+            </div>
+            <div class="product-card__price-wrap">
+              <span class="product-card__price">1200 ₽</span>
+            </div>
+            <a href="product.html" class="product-card__title"
+              >Сухой корм PRO PLAN® RENAL PLUS</a
+            >
+            <div class="product-card__vars">
+              <span class="product-var active" data-variant-id="1">500 г</span>
+            </div>
+            <div class="product-card__bottom">
+              <span class="availability-text"
+                >Наличие: <br /><a href="#" class="availability-link"
+                  >в 2 магазинах</a
+                ></span
+              ><button class="btn-add-cart-desktop btn-add-cart-desktop-mobile" data-product-id="1">В КОРЗИНУ</button
+              ><button class="btn-add-cart-mobile" data-product-id="1">
+                <span class="btn-add-cart__plus"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    width="20"
+                    height="20"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                  >
+                    <path d="M12 5v14M5 12h14" /></svg></span
+                ><span class="btn-add-cart__icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="#icon-cart"></use></svg
+                ></span>
+              </button>
+            </div>
+          </div>
+          <div class="product-card">
+            <button class="product-card__fav">
+              <svg viewBox="0 0 24 24">
+                <use href="#icon-heart"></use>
+              </svg>
+            </button>
+            <div class="product-card__image-wrap">
+              <img src="img/3-2.png" class="product-card__img" loading="lazy" />
+              <div class="product-card__labels">
+                <span class="product-label label-new">Новинка</span>
+              </div>
+            </div>
+            <div class="product-card__price-wrap">
+              <span class="product-card__price">1200 ₽</span>
+            </div>
+            <a href="product.html" class="product-card__title"
+              >Наполнитель для кошек Cat Step Arctic</a
+            >
+            <div class="product-card__vars">
+              <span class="product-var active" data-variant-id="1">10 кг</span>
+            </div>
+            <div class="product-card__bottom">
+              <span class="availability-text"
+                >Наличие: <br /><a href="#" class="availability-link"
+                  >в 2 магазинах</a
+                ></span
+              ><button class="btn-add-cart-desktop btn-add-cart-desktop-mobile" data-product-id="1">В КОРЗИНУ</button
+              ><button class="btn-add-cart-mobile" data-product-id="1">
+                <span class="btn-add-cart__plus"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    width="20"
+                    height="20"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                  >
+                    <path d="M12 5v14M5 12h14" /></svg></span
+                ><span class="btn-add-cart__icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="#icon-cart"></use></svg
+                ></span>
+              </button>
+            </div>
+          </div>
+          <div class="product-card">
+            <button class="product-card__fav">
+              <svg viewBox="0 0 24 24">
+                <use href="#icon-heart"></use>
+              </svg>
+            </button>
+            <div class="product-card__image-wrap">
+              <img src="img/3-3.png" class="product-card__img" loading="lazy" />
+            </div>
+            <div class="product-card__price-wrap">
+              <span class="product-card__price">1200 ₽</span>
+            </div>
+            <a href="product.html" class="product-card__title"
+              >Good Ralf влажный корм премиум</a
+            >
+            <div class="product-card__vars">
+              <span class="product-var active" data-variant-id="1">340 г</span>
+            </div>
+            <div class="product-card__bottom">
+              <span class="availability-text"
+                >Наличие: <br /><a href="#" class="availability-link"
+                  >в 2 магазинах</a
+                ></span
+              ><button class="btn-add-cart-desktop btn-add-cart-desktop-mobile" data-product-id="1">В КОРЗИНУ</button
+              ><button class="btn-add-cart-mobile" data-product-id="1">
+                <span class="btn-add-cart__plus"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    width="20"
+                    height="20"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                  >
+                    <path d="M12 5v14M5 12h14" /></svg></span
+                ><span class="btn-add-cart__icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="#icon-cart"></use></svg
+                ></span>
+              </button>
+            </div>
+          </div>
+          <div class="product-card">
+            <button class="product-card__fav">
+              <svg viewBox="0 0 24 24">
+                <use href="#icon-heart"></use>
+              </svg>
+            </button>
+            <div class="product-card__image-wrap">
+              <img src="img/3-4.png" class="product-card__img" loading="lazy" />
+            </div>
+            <div class="product-card__price-wrap">
+              <span class="product-card__price">1100 ₽</span>
+            </div>
+            <a href="product.html" class="product-card__title"
+              >MAX&MOLLY, Комбинированная игрушка</a
+            >
+            <div class="product-card__vars"></div>
+            <div class="product-card__bottom">
+              <span class="availability-text">Под заказ</span
+              ><button class="btn-add-cart-desktop btn-add-cart-desktop-mobile" data-product-id="1">В КОРЗИНУ</button
+              ><button class="btn-add-cart-mobile" data-product-id="1">
+                <span class="btn-add-cart__plus"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    width="20"
+                    height="20"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                  >
+                    <path d="M12 5v14M5 12h14" /></svg></span
+                ><span class="btn-add-cart__icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="#icon-cart"></use></svg
+                ></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pagination">
+          <a
+            href="#"
+            class="pagination-arrow disabled"
+            aria-label="Предыдущая страница"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-slider-prev"></use>
+            </svg>
+          </a>
+          <a href="#" class="pagination-num active">1</a>
+          <a href="#" class="pagination-num">2</a>
+          <a href="#" class="pagination-num">3</a>
+          <span class="pagination-dots">...</span>
+          <a href="#" class="pagination-num">12</a>
+          <a href="#" class="pagination-arrow" aria-label="Следующая страница">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#icon-slider-next"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    {{> footer }}
+    {{> sprite }}
+    {{> modals }}
+    {{> scripts }}
+  </body>
+</html>

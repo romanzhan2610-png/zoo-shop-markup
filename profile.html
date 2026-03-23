@@ -1,0 +1,1804 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    {{> head }}
+  </head>
+  <body>
+    {{> header }}
+    <main class="page-content profile-page">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+          <a href="index.html">Главная</a>
+          <svg
+            class="breadcrumb-separator"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <use href="#icon-paw"></use>
+          </svg>
+          <span aria-current="page">Личный кабинет</span>
+        </nav>
+
+        <h1 class="page-title" id="profilePageTitle">Личный кабинет</h1>
+
+        <div
+          class="profile-tabs__nav"
+          id="profileTabsNav"
+          role="tablist"
+          aria-label="Навигация личного кабинета"
+        >
+          <div class="profile-tabs__scroll">
+            <button
+              class="profile-tab-btn"
+              data-tab="main"
+              role="tab"
+              aria-selected="true"
+              aria-controls="tab-main"
+            >
+              Главная
+            </button>
+            <button
+              class="profile-tab-btn"
+              data-tab="bonuses"
+              role="tab"
+              aria-selected="false"
+              aria-controls="tab-bonuses"
+            >
+              Бонусы
+            </button>
+            <button
+              class="profile-tab-btn"
+              data-tab="data"
+              role="tab"
+              aria-selected="false"
+              aria-controls="tab-data"
+            >
+              Личные данные
+            </button>
+            <button
+              class="profile-tab-btn"
+              data-tab="orders"
+              role="tab"
+              aria-selected="false"
+              aria-controls="tab-orders"
+            >
+              Заказы
+            </button>
+            <button
+              class="profile-tab-btn"
+              data-tab="auto"
+              role="tab"
+              aria-selected="false"
+              aria-controls="tab-auto"
+            >
+              Автопокупки
+            </button>
+            <button
+              class="profile-tab-btn"
+              data-tab="favorites"
+              role="tab"
+              aria-selected="false"
+              aria-controls="tab-favorites"
+            >
+              Избранное
+            </button>
+          </div>
+          <button class="profile-tab-logout">Выйти из аккаунта</button>
+        </div>
+
+        <div class="profile-tabs__content">
+          <div
+            class="profile-tab-pane"
+            id="tab-main"
+            role="tabpanel"
+            tabindex="0"
+          >
+            <div class="profile-grid">
+              <div class="profile-card profile-card--user">
+                <div class="profile-card__info">
+                  <h3 class="profile-card__title">Васильева Дарья</h3>
+                  <div class="profile-card__contacts">
+                    <span>+7 (913) 999-99-99</span>
+                    <span>annas@mail.ru</span>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="btn-edit-pill"
+                  data-switch-tab="data"
+                >
+                  РЕДАКТИРОВАТЬ
+                  <span class="btn-edit-icon">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"
+                      ></path>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+
+              <div
+                class="profile-card profile-card--link"
+                data-switch-tab="favorites"
+              >
+                <div class="profile-card__header">
+                  <h3 class="profile-card__title">Избранное</h3>
+                  <div class="arrow-circle-btn">
+                    <svg viewBox="0 0 14 14" aria-hidden="true">
+                      <use href="#icon-arrow-up-right"></use>
+                    </svg>
+                  </div>
+                </div>
+                <span class="profile-card__subtitle">5 товаров</span>
+              </div>
+
+              <div
+                class="profile-card profile-card--bonuses"
+                data-switch-tab="bonuses"
+              >
+                <div class="bonuses-info">
+                  <span class="bonuses-count">150</span>
+                  <span class="bonuses-label">бонусов</span>
+                </div>
+                <div class="bonuses-qr-wrapper" data-qr-value="user_bonus_150">
+                  <img
+                    src="img/qr-placeholder.png"
+                    alt="QR Код"
+                    loading="lazy"
+                    style="filter: brightness(0) invert(1)"
+                  />
+                </div>
+                <div class="arrow-circle-btn">
+                  <svg viewBox="0 0 14 14" aria-hidden="true">
+                    <use href="#icon-arrow-up-right"></use>
+                  </svg>
+                </div>
+              </div>
+
+              <div
+                class="profile-card profile-card--link"
+                data-switch-tab="orders"
+              >
+                <div class="profile-card__icon">
+                  <svg viewBox="0 0 32 32" aria-hidden="true">
+                    <use href="#icon-orders-new"></use>
+                  </svg>
+                </div>
+                <div class="profile-card__bottom">
+                  <h3 class="profile-card__title">Мои заказы</h3>
+                  <span class="profile-card__subtitle">5 заказов</span>
+                </div>
+                <div class="arrow-circle-btn">
+                  <svg viewBox="0 0 14 14" aria-hidden="true">
+                    <use href="#icon-arrow-up-right"></use>
+                  </svg>
+                </div>
+              </div>
+
+              <div
+                class="profile-card profile-card--link"
+                data-switch-tab="auto"
+              >
+                <div class="profile-card__icon">
+                  <svg viewBox="0 0 36 36" aria-hidden="true">
+                    <use href="#icon-auto"></use>
+                  </svg>
+                </div>
+                <div class="profile-card__bottom">
+                  <h3 class="profile-card__title">Автопокупки</h3>
+                  <span class="profile-card__subtitle">2 запланированных</span>
+                </div>
+                <div class="arrow-circle-btn">
+                  <svg viewBox="0 0 14 14" aria-hidden="true">
+                    <use href="#icon-arrow-up-right"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="profile-tab-pane"
+            id="tab-bonuses"
+            role="tabpanel"
+            tabindex="0"
+          >
+            <div class="bonuses-card-big">
+              <div class="bonuses-card-big__info">
+                <span class="bonuses-card-big__count">150</span>
+                <span class="bonuses-card-big__label">бонусов</span>
+                <span class="bonuses-card-big__cashback"
+                  >до <span>7%</span> кешбэк</span
+                >
+              </div>
+              <div class="bonuses-card-big__qr" data-qr-value="user_bonus_150">
+                <img
+                  src="img/qr-placeholder.png"
+                  alt="QR Код"
+                  loading="lazy"
+                  style="filter: brightness(0) invert(1)"
+                />
+              </div>
+            </div>
+
+            <section class="bonus-program">
+              <h3 class="bonus-program__title">Бонусная программа</h3>
+              <div class="bonus-program__main">
+                <div class="bonus-program__image-wrap">
+                  <img
+                    src="img/hamster-card.png"
+                    alt="Программа"
+                    class="bonus-program__img"
+                    loading="lazy"
+                  />
+                </div>
+                <ul class="loyalty__list" style="flex: 1">
+                  <li>
+                    <svg
+                      class="paw-icon"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <use href="#icon-paw"></use>
+                    </svg>
+                    Получайте специальные предложения
+                  </li>
+                  <li>
+                    <svg
+                      class="paw-icon"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <use href="#icon-paw"></use>
+                    </svg>
+                    Оплачивайте до 30% от суммы чека
+                  </li>
+                  <li>
+                    <svg
+                      class="paw-icon"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <use href="#icon-paw"></use>
+                    </svg>
+                    1 бонус = 1 рубль
+                  </li>
+                  <li>
+                    <svg
+                      class="paw-icon"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <use href="#icon-paw"></use>
+                    </svg>
+                    Активация через 14 дней и сохраняются в течении 180 дней с
+                    момента начисления
+                  </li>
+                </ul>
+              </div>
+              <div class="bonus-program__levels">
+                <div
+                  class="bonus-program__level-card bonus-program__level-card--3"
+                >
+                  <span class="level-percent">3%</span>
+                  <span class="level-text">Покупка от 100 ₽</span>
+                </div>
+                <div
+                  class="bonus-program__level-card bonus-program__level-card--5"
+                >
+                  <span class="level-percent">5%</span>
+                  <span class="level-text">Покупка от 5000 ₽</span>
+                </div>
+                <div
+                  class="bonus-program__level-card bonus-program__level-card--7"
+                >
+                  <span class="level-percent">7%</span>
+                  <span class="level-text">Покупка от 7000 ₽</span>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div
+            class="profile-tab-pane"
+            id="tab-data"
+            role="tabpanel"
+            tabindex="0"
+          >
+            <form
+              class="profile-form"
+              action="#"
+              method="POST"
+              id="profileDataForm"
+            >
+              <div class="checkout-block">
+                <h2 class="checkout-block__title">1. Основная информация</h2>
+                <div class="form-group">
+                  <label for="profName">ФИО</label>
+                  <input
+                    type="text"
+                    id="profName"
+                    name="name"
+                    placeholder="Как можно к вам обращаться?"
+                    value="Васильева Дарья"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="profPhone">Телефон</label>
+                  <input
+                    type="tel"
+                    id="profPhone"
+                    name="phone"
+                    placeholder="+7 (999) 999-99-99"
+                    value="+7 (913) 999-99-99"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="profEmail">Email</label>
+                  <input
+                    type="email"
+                    id="profEmail"
+                    name="email"
+                    placeholder="Email"
+                    value="annas@mail.ru"
+                  />
+                </div>
+              </div>
+
+              <div class="checkout-block" style="margin-top: 40px">
+                <h2 class="checkout-block__title">2. Адрес доставки</h2>
+                <div
+                  class="form-group custom-dropdown-wrap"
+                  id="profCityDropdownWrap"
+                >
+                  <label for="profCityInput">Населенный пункт</label>
+                  <div class="relative">
+                    <input
+                      type="text"
+                      id="profCityInput"
+                      placeholder="Населенный пункт"
+                      autocomplete="off"
+                    />
+                    <svg class="dropdown-chevron" viewBox="0 0 10 6">
+                      <use href="#icon-dropdown"></use>
+                    </svg>
+                    <ul class="custom-dropdown-list" id="profCityList">
+                      <li>г. Красноярск</li>
+                      <li>г. Ачинск</li>
+                      <li>г. Дивногорск</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="form-group" style="margin-top: 20px">
+                  <label for="profStreetInput">Адрес</label>
+                  <input
+                    type="text"
+                    id="profStreetInput"
+                    name="street"
+                    placeholder="Адрес доставки"
+                  />
+                </div>
+                <div
+                  class="form-row"
+                  style="margin-top: 20px; display: flex; gap: 20px"
+                >
+                  <div class="form-group" style="flex: 1">
+                    <label>Квартира</label><input type="text" name="flat" />
+                  </div>
+                  <div class="form-group" style="flex: 1">
+                    <label>Подъезд</label><input type="text" name="entrance" />
+                  </div>
+                </div>
+                <label
+                  class="custom-checkbox policy-checkbox"
+                  style="margin-top: 32px; display: flex"
+                >
+                  <input type="checkbox" name="policy" checked />
+                  <span class="box"
+                    ><svg viewBox="0 0 24 24"><use href="#icon-paw"></use></svg
+                  ></span>
+                  <span class="text"
+                    >Я даю <a href="#">согласие</a> на обработку своих
+                    персональных данных в соответствии с
+                    <a href="privacy.html" target="_blank"
+                      >политикой обработки персональных данных</a
+                    ></span
+                  >
+                </label>
+              </div>
+
+              <div style="margin-top: 40px; max-width: 440px">
+                <button type="submit" class="btn-submit-form">
+                  СОХРАНИТЬ ДАННЫЕ
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div
+            class="profile-tab-pane"
+            id="tab-orders"
+            role="tabpanel"
+            tabindex="0"
+          >
+            <div class="subview-pane active" id="ordersListView">
+              <h2 class="profile-section-title">Мои заказы</h2>
+              <div class="order-list">
+                <div class="order-item js-open-order is-link">
+                  <div class="order-item__left">
+                    <div class="order-item__top">
+                      <span class="status-pill green">Готов к выдаче</span>
+                      <span class="order-item__number">№253948</span>
+                    </div>
+                    <div class="order-item__date">25 янв. 2025</div>
+                    <div class="order-item__delivery-type">Самовывоз</div>
+                    <div class="order-item__address">
+                      г. Красноярск, ул. Академика Киренского, 67
+                    </div>
+                    <div class="order-item__price">1200 ₽</div>
+                    <button
+                      type="button"
+                      class="btn-outline-primary order-item__btn"
+                    >
+                      ПОВТОРИТЬ ЗАКАЗ
+                    </button>
+                  </div>
+
+                  <div class="order-item__right">
+                    <div class="order-item__link-arrow" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <use href="#icon-arrow-up-right-lg"></use>
+                      </svg>
+                    </div>
+                    <div class="order-item__thumbs">
+                      <img src="img/3-2.png" alt="" loading="lazy" />
+                      <img src="img/3-1.png" alt="" loading="lazy" />
+                      <img src="img/3-3.png" alt="" loading="lazy" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="order-item js-open-order is-link">
+                  <div class="order-item__left">
+                    <div class="order-item__top">
+                      <span class="status-pill orange">Оформлен</span>
+                      <span class="order-item__number">№253949</span>
+                    </div>
+                    <div class="order-item__date">25 янв. 2025</div>
+                    <div class="order-item__delivery-type">Доставка</div>
+                    <div class="order-item__address">
+                      г. Красноярск, ул. Ленина, 126, кв. 15
+                    </div>
+                    <div class="order-item__price">1600 ₽</div>
+                    <button
+                      type="button"
+                      class="btn-outline-primary order-item__btn"
+                    >
+                      ПОВТОРИТЬ ЗАКАЗ
+                    </button>
+                  </div>
+
+                  <div class="order-item__right">
+                    <div class="order-item__link-arrow" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <use href="#icon-arrow-up-right-lg"></use>
+                      </svg>
+                    </div>
+                    <div class="order-item__thumbs">
+                      <img src="img/3-1.png" alt="" loading="lazy" />
+                      <img src="img/3-3.png" alt="" loading="lazy" />
+                      <div class="thumb-more">+6</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="subview-pane" id="orderDetailView">
+              <div class="order-detail__grid">
+                <div class="order-detail__main">
+                  <div class="order-detail__top">
+                    <button
+                      class="btn-back-icon js-back-to-orders"
+                      aria-label="Назад"
+                    >
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#icon-chevron-left"></use>
+                      </svg>
+                    </button>
+                    <div class="order-detail__title-row">
+                      <h2 class="order-detail__title">Заказ №253948</h2>
+                      <span class="status-pill green">Готов к выдаче</span>
+                    </div>
+                  </div>
+
+                  <span class="order-detail__date"
+                    >25 янв. 2025, 10:00-18:00</span
+                  >
+
+                  <div class="order-detail__info-blocks">
+                    <div class="info-block">
+                      <strong>Доставка</strong>
+                      <span>г. Красноярск, ул. Ленина 15, кв. 27</span>
+                    </div>
+                    <div class="info-block">
+                      <strong>Оплата</strong>
+                      <span>Наличный расчет</span>
+                    </div>
+                  </div>
+
+                  <h3 class="order-detail__subtitle">3 товара</h3>
+
+                  <div class="order-detail__products">
+                    <div class="order-product">
+                      <img
+                        src="img/3-1.png"
+                        alt="Pro Plan"
+                        class="order-product__img"
+                      />
+                      <div class="order-product__info">
+                        <a href="product.html" class="order-product__title"
+                          >Pro Plan Delicate Optirenal Lamb 3кг для взрослых
+                          кошек с чувствительным</a
+                        >
+                        <span class="order-product__weight">Вес: 500 г</span>
+                      </div>
+
+                      <div class="order-product__controls">
+                        <div class="order-product__price-qty">
+                          <span class="order-product__qty">1 шт</span>
+                          <div class="price-wrap">
+                            <span class="current">1200 ₽</span>
+                            <span class="old">1600 ₽</span>
+                          </div>
+                        </div>
+                        <button
+                          class="order-product__fav"
+                          aria-label="В избранное"
+                        >
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <use href="#icon-heart"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="order-product">
+                      <img
+                        src="img/3-3.png"
+                        alt="Pro Plan"
+                        class="order-product__img"
+                      />
+                      <div class="order-product__info">
+                        <a href="product.html" class="order-product__title"
+                          >Pro Plan Delicate Optirenal Lamb 3кг для взрослых
+                          кошек с чувствительным</a
+                        >
+                        <span class="order-product__weight">Вес: 500 г</span>
+                      </div>
+
+                      <div class="order-product__controls">
+                        <div class="order-product__price-qty">
+                          <span class="order-product__qty">1 шт</span>
+                          <div class="price-wrap">
+                            <span class="current">1200 ₽</span>
+                            <span class="old">1600 ₽</span>
+                          </div>
+                        </div>
+                        <button
+                          class="order-product__fav"
+                          aria-label="В избранное"
+                        >
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <use href="#icon-heart"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="order-detail__sidebar">
+                  <div class="order-summary-box">
+                    <div class="cart-summary-row">
+                      <span class="label">Сумма товаров</span>
+                      <span class="spec-dots"></span>
+                      <span class="value">2020 ₽</span>
+                    </div>
+
+                    <div class="cart-summary-row discount">
+                      <span class="label">Скидка</span>
+                      <span class="spec-dots"></span>
+                      <span class="value">-400 ₽</span>
+                    </div>
+
+                    <div class="cart-summary-row discount">
+                      <span class="label">Промокод</span>
+                      <span class="spec-dots"></span>
+                      <span class="value">-100 ₽</span>
+                    </div>
+
+                    <div class="cart-summary-row">
+                      <span class="label">Доставка</span>
+                      <span class="spec-dots"></span>
+                      <span class="value">200 ₽</span>
+                    </div>
+
+                    <div class="cart-summary-row total">
+                      <span class="label">Итого</span>
+                      <span class="spec-dots"></span>
+                      <span class="value">1720 ₽</span>
+                    </div>
+
+                    <button
+                      class="btn-outline-primary btn-block"
+                      style="border-radius: 40px"
+                    >
+                      ПОВТОРИТЬ ЗАКАЗ
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="profile-tab-pane"
+            id="tab-auto"
+            role="tabpanel"
+            tabindex="0"
+          >
+            <div class="subview-pane" id="autoListView">
+              <h2 class="profile-section-title">Автопокупки</h2>
+              <div class="order-list">
+                <div class="order-item auto-item">
+                  <div class="order-item__left">
+                    <div class="order-item__date">
+                      Следующая доставка:
+                      <strong>27 мар. 2026, 10:00 - 18:00</strong>
+                    </div>
+                    <div class="order-item__delivery-type">Ежемесячно</div>
+                    <div class="order-item__address">
+                      г. Красноярск, ул.Ленина 25, кв. 15
+                    </div>
+                    <div class="order-item__payment-type">Наличный расчет</div>
+                    <div class="order-item__price">1200 ₽</div>
+                    <button
+                      class="btn-outline-primary order-item__btn js-edit-auto"
+                    >
+                      ИЗМЕНИТЬ ИНФОРМАЦИЮ
+                    </button>
+                  </div>
+
+                  <div class="order-item__right">
+                    <button
+                      class="cart-remove-btn"
+                      aria-label="Удалить автопокупку"
+                    >
+                      <svg viewBox="0 0 24 24">
+                        <use href="#icon-trash"></use>
+                      </svg>
+                    </button>
+                    <div class="order-item__thumbs">
+                      <img src="img/3-2.png" alt="" />
+                      <img src="img/3-1.png" alt="" />
+                      <img src="img/3-3.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="order-item auto-item">
+                  <div class="order-item__left">
+                    <div class="order-item__date">
+                      Следующая доставка:
+                      <strong>27 мар. 2026, 10:00 - 18:00</strong>
+                    </div>
+                    <div class="order-item__delivery-type">Еженедельно</div>
+                    <div class="order-item__address">
+                      Самовывоз, ул. Академика Киренского, 67
+                    </div>
+                    <div class="order-item__payment-type">
+                      Безналичный расчет
+                    </div>
+                    <div class="order-item__price">1200 ₽</div>
+                    <button
+                      class="btn-outline-primary order-item__btn js-edit-auto"
+                    >
+                      ИЗМЕНИТЬ ИНФОРМАЦИЮ
+                    </button>
+                  </div>
+
+                  <div class="order-item__right">
+                    <button
+                      class="cart-remove-btn"
+                      aria-label="Удалить автопокупку"
+                    >
+                      <svg viewBox="0 0 24 24">
+                        <use href="#icon-trash"></use>
+                      </svg>
+                    </button>
+                    <div class="order-item__thumbs">
+                      <img src="img/3-2.png" alt="" />
+                      <img src="img/3-1.png" alt="" />
+                      <img src="img/3-3.png" alt="" />
+                      <div class="thumb-more">+2</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="subview-pane" id="autoEditView">
+              <div class="order-detail__top">
+                <button
+                  class="btn-back-icon js-back-to-auto-list"
+                  aria-label="Назад"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="#icon-chevron-left"></use>
+                  </svg>
+                </button>
+                <div class="order-detail__title-row">
+                  <h2 class="order-detail__title">Изменение автопокупки</h2>
+                </div>
+              </div>
+
+              <div class="checkout-grid">
+                <div class="checkout-main">
+                  <div class="checkout-block">
+                    <h2 class="checkout-block__title">1. Тип доставки</h2>
+
+                    <div class="delivery-options">
+                      <div class="radio-card active" id="autoCardPickup">
+                        <label class="radio-card__header">
+                          <input
+                            type="radio"
+                            name="auto_delivery_type"
+                            value="pickup"
+                            checked
+                            class="real-radio"
+                          />
+                          <span class="fake-radio"></span>
+                          <div class="radio-card__info">
+                            <div class="radio-card__row">
+                              <span class="radio-card__title">Самовывоз</span>
+                              <span class="radio-card__price">Бесплатно</span>
+                            </div>
+                            <p
+                              class="radio-card__desc hidden"
+                              id="autoDescPickup"
+                            >
+                              Выберите удобный филиал.
+                            </p>
+                            <div
+                              class="radio-card__saved-data"
+                              id="autoSavedDataPickup"
+                            >
+                              <div
+                                class="saved-title"
+                                id="autoSavedTitlePickup"
+                              >
+                                Киренского
+                              </div>
+                              <div
+                                class="saved-address"
+                                id="autoSavedAddressPickup"
+                              >
+                                г. Красноярск, ул. Академика Киренского, 67
+                              </div>
+                            </div>
+                          </div>
+                        </label>
+
+                        <div
+                          class="radio-card__body hidden"
+                          id="autoBodyPickup"
+                        >
+                          <div class="body-header">
+                            <h3>Филиалы</h3>
+                            <button
+                              type="button"
+                              id="autoBtnClosePickup"
+                              class="modal-close static"
+                              aria-label="Закрыть"
+                            >
+                              <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <use href="#icon-close"></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <div class="branches-list">
+                            <label class="branch-radio">
+                              <input
+                                type="radio"
+                                name="auto_branch"
+                                value="Киренского"
+                                data-address="г. Красноярск, ул. Академика Киренского, 67"
+                                checked
+                              />
+                              <span class="fake-radio"></span>
+                              <div class="branch-info">
+                                <span class="branch-name">Киренского</span>
+                                <span class="branch-address"
+                                  >г. Красноярск, ул. Академика Киренского,
+                                  67</span
+                                >
+                              </div>
+                            </label>
+                            <label class="branch-radio">
+                              <input
+                                type="radio"
+                                name="auto_branch"
+                                value="Шумяцково"
+                                data-address="г. Красноярск, ул. Шумяцкого, 4"
+                              />
+                              <span class="fake-radio"></span>
+                              <div class="branch-info">
+                                <span class="branch-name">Шумяцково</span>
+                                <span class="branch-address"
+                                  >г. Красноярск, ул. Шумяцкого, 4</span
+                                >
+                              </div>
+                            </label>
+                          </div>
+                          <button
+                            type="button"
+                            class="btn-submit-form"
+                            id="autoBtnSavePickup"
+                            style="height: 50px; margin-top: 32px"
+                          >
+                            СОХРАНИТЬ
+                          </button>
+                        </div>
+
+                        <div class="radio-card__actions" id="autoActionsPickup">
+                          <button
+                            type="button"
+                            class="btn-text-action"
+                            id="autoBtnChangePickup"
+                          >
+                            ИЗМЕНИТЬ ФИЛИАЛ
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="radio-card" id="autoCardDelivery">
+                        <label class="radio-card__header">
+                          <input
+                            type="radio"
+                            name="auto_delivery_type"
+                            value="delivery"
+                            class="real-radio"
+                          />
+                          <span class="fake-radio"></span>
+                          <div class="radio-card__info">
+                            <div class="radio-card__row">
+                              <span class="radio-card__title">Доставка</span>
+                              <span
+                                class="radio-card__price"
+                                id="autoPriceDelivery"
+                                >Узнать стоимость</span
+                              >
+                            </div>
+                            <p class="radio-card__desc" id="autoDescDelivery">
+                              Бесплатная доставка по городу от 2000 ₽.
+                            </p>
+                            <div
+                              class="radio-card__saved-data hidden"
+                              id="autoSavedDataDelivery"
+                            >
+                              <div class="saved-title">Адрес доставки</div>
+                              <div
+                                class="saved-address"
+                                id="autoSavedAddressDelivery"
+                              ></div>
+                            </div>
+                          </div>
+                        </label>
+
+                        <div
+                          class="radio-card__body hidden"
+                          id="autoBodyDelivery"
+                        >
+                          <div
+                            class="form-group custom-dropdown-wrap"
+                            id="autoCityDropdownWrap"
+                          >
+                            <input
+                              type="text"
+                              id="autoCityInput"
+                              placeholder="Город (например, Красноярск)"
+                              autocomplete="off"
+                            />
+                            <svg
+                              class="dropdown-chevron"
+                              viewBox="0 0 10 6"
+                              aria-hidden="true"
+                            >
+                              <use href="#icon-dropdown"></use>
+                            </svg>
+                            <ul class="custom-dropdown-list" id="autoCityList">
+                              <li>г. Красноярск</li>
+                              <li>г. Ачинск</li>
+                              <li>г. Дивногорск</li>
+                            </ul>
+                          </div>
+                          <div class="form-group" style="margin-top: 12px">
+                            <input
+                              type="text"
+                              id="autoStreetInput"
+                              placeholder="Улица, дом"
+                            />
+                          </div>
+                          <div
+                            class="form-row"
+                            style="margin-top: 12px; display: flex; gap: 12px"
+                          >
+                            <div class="form-group" style="flex: 1">
+                              <input
+                                type="text"
+                                id="autoFlatInput"
+                                placeholder="Квартира"
+                              />
+                            </div>
+                            <div class="form-group" style="flex: 1">
+                              <input type="text" placeholder="Подъезд" />
+                            </div>
+                          </div>
+                          <button
+                            type="button"
+                            class="btn-submit-form"
+                            id="autoBtnSaveDelivery"
+                            style="height: 50px; margin-top: 32px"
+                          >
+                            СОХРАНИТЬ
+                          </button>
+                        </div>
+
+                        <div
+                          class="radio-card__actions hidden"
+                          id="autoActionsDelivery"
+                        >
+                          <button
+                            type="button"
+                            class="btn-text-action"
+                            id="autoBtnChangeDelivery"
+                          >
+                            ИЗМЕНИТЬ АДРЕС
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="datetime-block"
+                      style="margin-top: 40px; display: block"
+                    >
+                      <div class="auto-edit-tabs">
+                        <div
+                          class="auto-edit-tab js-auto-tab"
+                          data-target="weekly"
+                        >
+                          Еженедельно
+                        </div>
+                        <div
+                          class="auto-edit-tab js-auto-tab active"
+                          data-target="monthly"
+                        >
+                          Ежемесячно
+                        </div>
+                      </div>
+
+                      <div
+                        class="auto-edit-pane js-auto-pane active"
+                        id="pane-monthly"
+                      >
+                        <h3
+                          class="auto-edit-pane__title"
+                          id="monthlyResultText"
+                        >
+                          25 числа
+                        </h3>
+                        <p class="auto-edit-pane__desc">
+                          Каждый месяц, придет оповещение для подтверждения
+                          заказа
+                        </p>
+                        <button
+                          type="button"
+                          class="btn-buy-outline auto-edit-pane__btn"
+                          id="btnToggleMonthlyCalendar"
+                        >
+                          ИЗМЕНИТЬ ДАТУ
+                        </button>
+
+                        <div class="calendar-popup" id="calendarMonthly">
+                          <div class="calendar-popup__header">
+                            <h4 class="calendar-popup__title">
+                              Выберите дату каждого месяца:
+                            </h4>
+                            <button
+                              class="calendar-popup__close js-close-calendar"
+                              type="button"
+                            >
+                              <svg><use href="#icon-close"></use></svg>
+                            </button>
+                          </div>
+                          <p class="calendar-popup__desc">
+                            Если данной даты нет в каком-либо из месяцев,
+                            доставка будет выполнена в последний день текущего
+                            месяца
+                          </p>
+
+                          <div class="calendar-grid">
+                            <div class="calendar-grid-header">Пн</div>
+                            <div class="calendar-grid-header">Вт</div>
+                            <div class="calendar-grid-header">Ср</div>
+                            <div class="calendar-grid-header">Чт</div>
+                            <div class="calendar-grid-header">Пт</div>
+                            <div class="calendar-grid-header">Сб</div>
+                            <div class="calendar-grid-header">Вс</div>
+                            <div class="calendar-day js-cal-date">1</div>
+                            <div class="calendar-day js-cal-date">2</div>
+                            <div class="calendar-day js-cal-date">3</div>
+                            <div class="calendar-day js-cal-date">4</div>
+                            <div class="calendar-day js-cal-date">5</div>
+                            <div class="calendar-day js-cal-date">6</div>
+                            <div class="calendar-day js-cal-date">7</div>
+                            <div class="calendar-day js-cal-date">8</div>
+                            <div class="calendar-day js-cal-date">9</div>
+                            <div class="calendar-day js-cal-date">10</div>
+                            <div class="calendar-day js-cal-date">11</div>
+                            <div class="calendar-day js-cal-date">12</div>
+                            <div class="calendar-day js-cal-date">13</div>
+                            <div class="calendar-day js-cal-date">14</div>
+                            <div class="calendar-day js-cal-date">15</div>
+                            <div class="calendar-day js-cal-date active">
+                              16
+                            </div>
+                            <div class="calendar-day js-cal-date">17</div>
+                            <div class="calendar-day js-cal-date">18</div>
+                            <div class="calendar-day js-cal-date">19</div>
+                            <div class="calendar-day js-cal-date">20</div>
+                            <div class="calendar-day js-cal-date">21</div>
+                            <div class="calendar-day js-cal-date">22</div>
+                            <div class="calendar-day js-cal-date">23</div>
+                            <div class="calendar-day js-cal-date">24</div>
+                            <div class="calendar-day js-cal-date">25</div>
+                            <div class="calendar-day js-cal-date">26</div>
+                            <div class="calendar-day js-cal-date">27</div>
+                            <div class="calendar-day js-cal-date">28</div>
+                            <div class="calendar-day js-cal-date">29</div>
+                            <div class="calendar-day js-cal-date">30</div>
+                            <div class="calendar-day js-cal-date">31</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="auto-edit-pane js-auto-pane" id="pane-weekly">
+                        <h3 class="auto-edit-pane__title" id="weeklyResultText">
+                          По вторникам
+                        </h3>
+                        <p class="auto-edit-pane__desc">
+                          Каждую неделю, придет оповещение для подтверждения
+                          заказа
+                        </p>
+                        <button
+                          type="button"
+                          class="btn-buy-outline auto-edit-pane__btn"
+                          id="btnToggleWeeklyCalendar"
+                        >
+                          ИЗМЕНИТЬ ДЕНЬ НЕДЕЛИ
+                        </button>
+
+                        <div class="calendar-popup" id="calendarWeekly">
+                          <div class="calendar-popup__header">
+                            <h4 class="calendar-popup__title">
+                              Выберите день недели:
+                            </h4>
+                            <button
+                              class="calendar-popup__close js-close-calendar"
+                              type="button"
+                            >
+                              <svg><use href="#icon-close"></use></svg>
+                            </button>
+                          </div>
+                          <p class="calendar-popup__desc">
+                            В который Вы хотели бы получать выбранные товары
+                          </p>
+
+                          <div class="calendar-grid">
+                            <div class="calendar-day js-cal-day">Пн</div>
+                            <div
+                              class="calendar-day js-cal-day active"
+                              data-full="вторникам"
+                            >
+                              Вт
+                            </div>
+                            <div
+                              class="calendar-day js-cal-day"
+                              data-full="средам"
+                            >
+                              Ср
+                            </div>
+                            <div
+                              class="calendar-day js-cal-day"
+                              data-full="четвергам"
+                            >
+                              Чт
+                            </div>
+                            <div
+                              class="calendar-day js-cal-day"
+                              data-full="пятницам"
+                            >
+                              Пт
+                            </div>
+                            <div
+                              class="calendar-day js-cal-day"
+                              data-full="субботам"
+                            >
+                              Сб
+                            </div>
+                            <div
+                              class="calendar-day js-cal-day"
+                              data-full="воскресеньям"
+                            >
+                              Вс
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="checkout-block">
+                    <h2 class="checkout-block__title">2. Получатель</h2>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        value="Иванов Иван Петрович"
+                        placeholder="ФИО"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="tel"
+                        value="+7 (999) 999-99-99"
+                        placeholder="Телефон"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="email"
+                        value="Test@mail.ru"
+                        placeholder="Email"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <input type="text" placeholder="Комментарий" />
+                    </div>
+                  </div>
+
+                  <div class="checkout-block">
+                    <h2 class="checkout-block__title">3. Оплата</h2>
+                    <div class="payment-options">
+                      <div class="radio-card mini">
+                        <label class="radio-card__header">
+                          <input
+                            type="radio"
+                            name="auto_pay"
+                            value="cash"
+                            class="real-radio"
+                          />
+                          <span class="fake-radio"></span>
+                          <div class="radio-card__info">
+                            <span class="radio-card__title">Наличные</span>
+                            <span class="radio-card__desc payment-desc"
+                              >С какой суммы нужна сдача</span
+                            >
+                          </div>
+                        </label>
+                      </div>
+
+                      <div
+                        class="change-input-wrap hidden"
+                        id="autoChangeInputWrap"
+                      >
+                        <label>С какой суммы подготовить сдачу?</label>
+                        <input
+                          type="text"
+                          placeholder="Укажите сумму"
+                          inputmode="numeric"
+                          pattern="[0-9]*"
+                        />
+                      </div>
+
+                      <div class="radio-card mini active">
+                        <label class="radio-card__header">
+                          <input
+                            type="radio"
+                            name="auto_pay"
+                            value="card"
+                            checked
+                            class="real-radio"
+                          />
+                          <span class="fake-radio"></span>
+                          <div class="radio-card__info">
+                            <span class="radio-card__title">Безналичные</span>
+                            <span class="radio-card__desc payment-desc"
+                              >При доставке курьер возьмет терминал</span
+                            >
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+
+                    <button
+                      class="btn-submit-form btn-block"
+                      style="margin-top: 40px !important"
+                    >
+                      СОХРАНИТЬ ИЗМЕНЕНИЯ
+                    </button>
+                  </div>
+                </div>
+
+                <aside class="checkout-sidebar">
+                  <div class="checkout-sidebar__inner">
+                    <div class="sidebar-header">
+                      <h2 class="sidebar-title">Ваш заказ</h2>
+                      <span class="sidebar-count">2 товара</span>
+                    </div>
+                    <div class="sidebar-items">
+                      <div class="cart-item">
+                        <div class="cart-item__img-wrap">
+                          <img
+                            src="img/3-1.png"
+                            alt="Товар"
+                            class="cart-item__img"
+                          />
+                        </div>
+                        <div class="cart-item__content">
+                          <div class="cart-item__top">
+                            <div class="cart-item__info">
+                              <a href="product.html" class="cart-item__title"
+                                >Pro Plan Delicate Optirenal Lamb 3кг для
+                                взрослых кошек</a
+                              >
+                              <div class="cart-item__weight">500 г</div>
+                            </div>
+                            <div class="cart-item__actions">
+                              <button
+                                type="button"
+                                class="cart-remove-btn"
+                                style="
+                                  background: transparent;
+                                  border: none;
+                                  color: var(--text-gray);
+                                "
+                              >
+                                <svg viewBox="0 0 24 24">
+                                  <use href="#icon-trash"></use>
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="cart-item__bottom">
+                            <div class="qty-selector">
+                              <button type="button" class="qty-btn qty-minus">
+                                -
+                              </button>
+                              <input
+                                type="text"
+                                class="qty-input"
+                                value="1"
+                                readonly
+                              />
+                              <button type="button" class="qty-btn qty-plus">
+                                +
+                              </button>
+                            </div>
+                            <div class="cart-item__price-wrap">
+                              <span class="cart-item__price">1 200 ₽</span
+                              ><span class="cart-item__old-price">1 600 ₽</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cart-item">
+                        <div class="cart-item__img-wrap">
+                          <img
+                            src="img/3-3.png"
+                            alt="Товар"
+                            class="cart-item__img"
+                          />
+                        </div>
+                        <div class="cart-item__content">
+                          <div class="cart-item__top">
+                            <div class="cart-item__info">
+                              <a href="product.html" class="cart-item__title"
+                                >Good Ralf влажный корм премиум (говяжье ассорти
+                                с тыквой)</a
+                              >
+                              <div class="cart-item__weight">380 г</div>
+                            </div>
+                            <div class="cart-item__actions">
+                              <button
+                                type="button"
+                                class="cart-remove-btn"
+                                style="
+                                  background: transparent;
+                                  border: none;
+                                  color: var(--text-gray);
+                                "
+                              >
+                                <svg viewBox="0 0 24 24">
+                                  <use href="#icon-trash"></use>
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="cart-item__bottom">
+                            <div class="qty-selector">
+                              <button type="button" class="qty-btn qty-minus">
+                                -
+                              </button>
+                              <input
+                                type="text"
+                                class="qty-input"
+                                value="2"
+                                readonly
+                              />
+                              <button type="button" class="qty-btn qty-plus">
+                                +
+                              </button>
+                            </div>
+                            <div class="cart-item__price-wrap">
+                              <span class="cart-item__price">820 ₽</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sidebar-footer">
+                      <div class="cart-summary">
+                        <div class="cart-summary-row">
+                          <span>Сумма товаров</span><span>2020 ₽</span>
+                        </div>
+                        <div class="cart-summary-row discount">
+                          <span>Скидка</span><span>-400 ₽</span>
+                        </div>
+                        <div
+                          class="cart-summary-row total"
+                          style="
+                            border-top: 1px dashed var(--border);
+                            padding-top: 20px;
+                            margin-top: 20px;
+                          "
+                        >
+                          <span>Итого</span><span>1620 ₽</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </aside>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="profile-tab-pane"
+            id="tab-favorites"
+            role="tabpanel"
+            tabindex="0"
+          >
+            <h2 class="profile-section-title" style="margin-bottom: 32px">
+              Ваше избранное
+            </h2>
+            <div class="catalog-grid">
+              <div class="product-card">
+                <button
+                  class="product-card__fav active"
+                  aria-label="Убрать из избранного"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="#icon-heart"></use>
+                  </svg>
+                </button>
+                <div class="product-card__image-wrap">
+                  <img
+                    src="img/3-1.png"
+                    alt="Pro Plan"
+                    class="product-card__img"
+                    loading="lazy"
+                  />
+                  <div class="product-card__labels">
+                    <span class="product-label label-new">Новинка</span>
+                  </div>
+                </div>
+                <div class="product-card__price-wrap">
+                  <span class="product-card__price">1200 ₽</span>
+                </div>
+                <a href="product.html" class="product-card__title"
+                  >Сухой корм PRO PLAN® RENAL PLUS</a
+                >
+                <div class="product-card__vars">
+                  <span class="product-var" data-variant-id="1">250 г</span>
+                  <span class="product-var active" data-variant-id="1"
+                    >500 г</span
+                  >
+                </div>
+                <div class="product-card__bottom">
+                  <span class="availability-text"
+                    >Наличие: <br /><a href="#" class="availability-link"
+                      >в 2 магазинах</a
+                    ></span
+                  >
+                  <button class="btn-add-cart-desktop btn-add-cart-desktop-mobile" data-product-id="1">
+                    В КОРЗИНУ
+                  </button>
+                  <button
+                    class="btn-add-cart-mobile"
+                    aria-label="Добавить в корзину"
+                    data-product-id="1"
+                  >
+                    <span class="btn-add-cart__plus"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        width="20"
+                        height="20"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        fill="none"
+                      >
+                        <path d="M12 5v14M5 12h14" /></svg
+                    ></span>
+                    <span class="btn-add-cart__icon"
+                      ><svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#icon-cart"></use></svg
+                    ></span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="product-card">
+                <button
+                  class="product-card__fav active"
+                  aria-label="Убрать из избранного"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="#icon-heart"></use>
+                  </svg>
+                </button>
+                <div class="product-card__image-wrap">
+                  <img
+                    src="img/3-2.png"
+                    alt="Cat Step"
+                    class="product-card__img"
+                    loading="lazy"
+                  />
+                  <div class="product-card__labels">
+                    <span class="product-label label-sale">Акция</span>
+                  </div>
+                </div>
+                <div class="product-card__price-wrap">
+                  <span class="product-card__price">1200 ₽</span>
+                  <span class="product-card__old-price">1600 ₽</span>
+                </div>
+                <a href="product.html" class="product-card__title"
+                  >Наполнитель для кошек Cat Step Arctic</a
+                >
+                <div class="product-card__vars">
+                  <span class="product-var active" data-variant-id="1"
+                    >10 кг</span
+                  >
+                </div>
+                <div class="product-card__bottom">
+                  <span
+                    class="availability-text"
+                    style="color: var(--text-gray)"
+                    >Под заказ</span
+                  >
+                  <button class="btn-add-cart-desktop btn-add-cart-desktop-mobile" data-product-id="1">
+                    В КОРЗИНУ
+                  </button>
+                  <button
+                    class="btn-add-cart-mobile"
+                    aria-label="Добавить в корзину"
+                    data-product-id="1"
+                  >
+                    <span class="btn-add-cart__plus"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        width="20"
+                        height="20"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        fill="none"
+                      >
+                        <path d="M12 5v14M5 12h14" /></svg
+                    ></span>
+                    <span class="btn-add-cart__icon"
+                      ><svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#icon-cart"></use></svg
+                    ></span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="product-card">
+                <button
+                  class="product-card__fav active"
+                  aria-label="Убрать из избранного"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="#icon-heart"></use>
+                  </svg>
+                </button>
+                <div class="product-card__image-wrap">
+                  <img
+                    src="img/3-3.png"
+                    alt="Good Ralf"
+                    class="product-card__img"
+                    loading="lazy"
+                  />
+                  <div class="product-card__labels">
+                    <span class="product-label label-new">Новинка</span>
+                  </div>
+                </div>
+                <div class="product-card__price-wrap">
+                  <span class="product-card__price">1200 ₽</span>
+                </div>
+                <a href="product.html" class="product-card__title"
+                  >Good Ralf влажный корм премиум</a
+                >
+                <div class="product-card__vars">
+                  <span class="product-var active" data-variant-id="1"
+                    >340 г</span
+                  >
+                </div>
+                <div class="product-card__bottom">
+                  <span class="availability-text"
+                    >Наличие: <br /><a href="#" class="availability-link"
+                      >в 2 магазинах</a
+                    ></span
+                  >
+                  <button class="btn-add-cart-desktop btn-add-cart-desktop-mobile" data-product-id="1">
+                    В КОРЗИНУ
+                  </button>
+                  <button
+                    class="btn-add-cart-mobile"
+                    aria-label="Добавить в корзину"
+                    data-product-id="1"
+                  >
+                    <span class="btn-add-cart__plus"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        width="20"
+                        height="20"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        fill="none"
+                      >
+                        <path d="M12 5v14M5 12h14" /></svg
+                    ></span>
+                    <span class="btn-add-cart__icon"
+                      ><svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#icon-cart"></use></svg
+                    ></span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="product-card">
+                <button
+                  class="product-card__fav active"
+                  aria-label="Убрать из избранного"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="#icon-heart"></use>
+                  </svg>
+                </button>
+                <div class="product-card__image-wrap">
+                  <img
+                    src="img/3-4.png"
+                    alt="MAX&MOLLY"
+                    class="product-card__img"
+                    loading="lazy"
+                  />
+                  <div class="product-card__labels">
+                    <span class="product-label label-sale">Акция</span>
+                  </div>
+                </div>
+                <div class="product-card__price-wrap">
+                  <span class="product-card__price">1100 ₽</span>
+                  <span class="product-card__old-price">1600 ₽</span>
+                </div>
+                <a href="product.html" class="product-card__title"
+                  >MAX&MOLLY, Комбинированная игрушка</a
+                >
+                <div class="product-card__vars"></div>
+                <div class="product-card__bottom">
+                  <span
+                    class="availability-text"
+                    style="color: var(--text-gray)"
+                    >Под заказ</span
+                  >
+                  <button class="btn-add-cart-desktop btn-add-cart-desktop-mobile" data-product-id="1">
+                    В КОРЗИНУ
+                  </button>
+                  <button
+                    class="btn-add-cart-mobile"
+                    aria-label="Добавить в корзину"
+                    data-product-id="1"
+                  >
+                    <span class="btn-add-cart__plus"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        width="20"
+                        height="20"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        fill="none"
+                      >
+                        <path d="M12 5v14M5 12h14" /></svg
+                    ></span>
+                    <span class="btn-add-cart__icon"
+                      ><svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#icon-cart"></use></svg
+                    ></span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="product-card">
+                <button
+                  class="product-card__fav active"
+                  aria-label="Убрать из избранного"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="#icon-heart"></use>
+                  </svg>
+                </button>
+                <div class="product-card__image-wrap">
+                  <img
+                    src="img/3-5.png"
+                    alt="Когтеточка"
+                    class="product-card__img"
+                    loading="lazy"
+                  />
+                  <div class="product-card__labels">
+                    <span class="product-label label-sale">Акция</span>
+                  </div>
+                </div>
+                <div class="product-card__price-wrap">
+                  <span class="product-card__price">850 ₽</span>
+                  <span class="product-card__old-price">1200 ₽</span>
+                </div>
+                <a href="product.html" class="product-card__title"
+                  >Когтеточка угловая из гофрокартона</a
+                >
+                <div class="product-card__vars">
+                  <span class="product-var active" data-variant-id="1"
+                    >Стандарт</span
+                  >
+                </div>
+                <div class="product-card__bottom">
+                  <span
+                    class="availability-text"
+                    style="color: var(--text-gray)"
+                    >Под заказ</span
+                  >
+                  <button class="btn-add-cart-desktop btn-add-cart-desktop-mobile" data-product-id="1">
+                    В КОРЗИНУ
+                  </button>
+                  <button
+                    class="btn-add-cart-mobile"
+                    aria-label="Добавить в корзину"
+                    data-product-id="1"
+                  >
+                    <span class="btn-add-cart__plus"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        width="20"
+                        height="20"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        fill="none"
+                      >
+                        <path d="M12 5v14M5 12h14" /></svg
+                    ></span>
+                    <span class="btn-add-cart__icon"
+                      ><svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#icon-cart"></use></svg
+                    ></span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="product-card">
+                <button
+                  class="product-card__fav active"
+                  aria-label="Убрать из избранного"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="#icon-heart"></use>
+                  </svg>
+                </button>
+                <div class="product-card__image-wrap">
+                  <img
+                    src="img/3-6.png"
+                    alt="Шампунь"
+                    class="product-card__img"
+                    loading="lazy"
+                  />
+                  <div class="product-card__labels">
+                    <span class="product-label label-new">Новинка</span>
+                  </div>
+                </div>
+                <div class="product-card__price-wrap">
+                  <span class="product-card__price">550 ₽</span>
+                </div>
+                <a href="product.html" class="product-card__title"
+                  >Шампунь для кошек и собак гипоаллергенный</a
+                >
+                <div class="product-card__vars">
+                  <span class="product-var active" data-variant-id="1"
+                    >250 мл</span
+                  >
+                  <span class="product-var" data-variant-id="1">500 мл</span>
+                </div>
+                <div class="product-card__bottom">
+                  <span class="availability-text"
+                    >Наличие: <br /><a href="#" class="availability-link"
+                      >в 2 магазинах</a
+                    ></span
+                  >
+                  <button class="btn-add-cart-desktop btn-add-cart-desktop-mobile" data-product-id="1">
+                    В КОРЗИНУ
+                  </button>
+                  <button
+                    class="btn-add-cart-mobile"
+                    aria-label="Добавить в корзину"
+                    data-product-id="1"
+                  >
+                    <span class="btn-add-cart__plus"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        width="20"
+                        height="20"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        fill="none"
+                      >
+                        <path d="M12 5v14M5 12h14" /></svg
+                    ></span>
+                    <span class="btn-add-cart__icon"
+                      ><svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="#icon-cart"></use></svg
+                    ></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    {{> footer }} {{> sprite }} {{> modals }} {{> scripts }}
+  </body>
+</html>

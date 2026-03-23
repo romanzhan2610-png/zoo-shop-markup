@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    {{> head }}
+  </head>
+  <body>
+    {{> header }}
+    <main class="page-content contacts-page">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+          <a href="#">Главная</a>
+          <svg
+            class="breadcrumb-separator"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <use href="#icon-paw"></use>
+          </svg>
+          <span aria-current="page">Контакты</span>
+        </nav>
+        <div class="contacts-grid">
+          <div class="contacts-cell">
+            <h1 class="contacts-col-title">Контакты</h1>
+            <div class="contacts-info-card">
+              <div class="info-group">
+                <h3>Телефоны</h3>
+                <a href="tel:+73912318555">+7 (391) 231-85-55</a>
+                <a href="tel:+79130318555">+7 (913) 031-85-55</a>
+              </div>
+
+              <div class="info-group">
+                <h3>Email</h3>
+                <a href="mailto:zoo124@list.ru">zoo124@list.ru</a>
+              </div>
+
+              <div class="info-group">
+                <h3>Наши соцсети</h3>
+                <div
+                  class="footer__socials footer__socials__contacts"
+                  style="gap: 16px"
+                >
+                  <a href="#" class="social-icon" aria-label="Мы в Вконтакте">
+                    <svg
+                      width="27"
+                      height="17"
+                      viewBox="0 0 27 17"
+                      aria-hidden="true"
+                    >
+                      <use href="#icon-vk"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="social-icon" aria-label="Мы в Telegram">
+                    <svg
+                      width="25"
+                      height="21"
+                      viewBox="0 0 25 21"
+                      aria-hidden="true"
+                    >
+                      <use href="#icon-tg"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contacts-cell">
+            <h2 class="contacts-col-title">Есть вопросы?</h2>
+            <div class="contacts-form-wrapper">
+              <p class="form-subtitle">Напишите нам и мы с Вами свяжемся</p>
+
+              <form class="contacts-form" action="#" method="POST">
+                <div class="form-group">
+                  <label for="contactName">Ваше имя</label>
+                  <input
+                    type="text"
+                    id="contactName"
+                    name="name"
+                    placeholder="Имя"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="contactPhone">Телефон</label>
+                  <input
+                    type="tel"
+                    id="contactPhone"
+                    name="phone"
+                    placeholder="Телефон"
+                    required
+                  />
+                </div>
+
+                <div class="form-group" style="flex-grow: 1">
+                  <label for="contactMessage">Вопрос или комментарий</label>
+                  <textarea
+                    id="contactMessage"
+                    name="message"
+                    placeholder="Вопрос или комментарий"
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit-form">
+                  ОТПРАВИТЬ
+                  <span class="btn-icon-circle">
+                    <svg viewBox="0 0 14 14" aria-hidden="true">
+                      <use href="#icon-arrow-up-right"></use>
+                    </svg>
+                  </span>
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="contacts-cell">
+            <h2 class="contacts-col-title">Наши филиалы</h2>
+            <div class="contacts-branches" id="branchList">
+              <button
+                class="branch-item active"
+                type="button"
+                data-coords="56.008984, 92.766730"
+              >
+                <h3>Киренского</h3>
+                <p>г. Красноярск, ул. Академика Киренского, 67</p>
+                <span>Ежедневно с 10:00 до 21:00</span>
+              </button>
+
+              <button
+                class="branch-item"
+                type="button"
+                data-coords="56.054366, 92.898858"
+              >
+                <h3>Шумяцкого</h3>
+                <p>г. Красноярск, ул. Шумяцкого, 4</p>
+                <span>Ежедневно с 10:00 до 21:00</span>
+              </button>
+
+              <button
+                class="branch-item"
+                type="button"
+                data-coords="55.986377, 92.898715"
+              >
+                <h3>60 лет октября</h3>
+                <p>г. Красноярск, ул. 60 лет октября, 45</p>
+                <span>Ежедневно с 10:00 до 21:00</span>
+              </button>
+
+              <button
+                class="branch-item"
+                type="button"
+                data-coords="56.046328, 92.802100"
+              >
+                <h3>Калинина</h3>
+                <p>г. Красноярск, ул. Калинина, 183</p>
+                <span>Ежедневно с 10:00 до 21:00</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="contacts-cell">
+            <div class="contacts-map-wrapper">
+              <div id="map"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    {{> footer }}
+    {{> sprite }}
+    {{> modals }}
+    {{> scripts }}
+  </body>
+</html>
