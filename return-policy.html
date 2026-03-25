@@ -19,7 +19,7 @@
     
     <link rel="icon" type="image/png" href="/zoo-shop-markup/assets/logo-CAR7RCZG.png" />
     <link rel="icon" type="image/svg+xml" href="/zoo-shop-markup/assets/map-pin-DspthSjL.svg" />
-    <script type="module" crossorigin src="/zoo-shop-markup/assets/main-DskU8z3u.js"></script>
+    <script type="module" crossorigin src="/zoo-shop-markup/assets/main-BKkBHU7H.js"></script>
     <link rel="stylesheet" crossorigin href="/zoo-shop-markup/assets/main-DuMfDrN1.css">
   </head>
   <body>
@@ -1672,6 +1672,17 @@
               <span class="form-error-msg"></span>
             </div>
             <div class="form-group">
+              <label for="regEmail" class="sr-only">Email</label>
+              <input
+                type="email"
+                id="regEmail"
+                name="email"
+                placeholder="Email"
+                required
+              />
+              <span class="form-error-msg"></span>
+            </div>
+            <div class="form-group">
               <label for="regPhone" class="sr-only">Телефон</label>
               <input
                 type="tel"
@@ -1813,7 +1824,8 @@
           </button>
           <h2 class="auth-modal__title">Код подтверждения</h2>
           <p class="auth-modal__desc">
-            Код отправлен на <strong id="codeTargetInfo"></strong>
+            Мы выслали вам код подтверждения на почту
+            <strong id="codeTargetInfo"></strong>. Введите его в поле ниже.
           </p>
           <div class="form-global-error" id="codeGlobalError"></div>
           <form class="auth-form" id="formCode" novalidate>
